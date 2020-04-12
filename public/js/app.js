@@ -31877,8 +31877,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/Julien/Documents/MAMP_Server/hiya/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/Julien/Documents/MAMP_Server/hiya/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/macbook/Desktop/hiya_website/HIYA/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/macbook/Desktop/hiya_website/HIYA/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

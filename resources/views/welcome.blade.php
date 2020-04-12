@@ -4,40 +4,20 @@
     <div id="welcome">
         <!-- ======= Hero Section ======= -->
         <section id="hero">
-            <img src="{{asset('img/welcome/women.png')}}" class="img-fluid hero-img" alt="" style="width:700px">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
                          data-aos="fade-up">
-
-                        <div>
-                            <h1>Welcome to HIYA</h1>
-                            <h2>Join our community of Lebanese Women</h2>
-                            <p>Become a member of our network by sharing your email with us</p>
-                            <div id="mc_embed_signup" class='ml-3'>
-                                <form action="https://gmail.us19.list-manage.com/subscribe/post?u=9a9569371c11dac5da8c7856d&amp;id=9930082c1c"
-                                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                      class="validate" target="_blank" novalidate>
-                                    <div id="mc_embed_signup_scroll" class="row">
-
-                                        <input type="email" value="" name="EMAIL"
-                                               class="email mc_embedded_subscribe_email_field mb-2 col-md-8 col-6"
-                                               id="mce-EMAIL" placeholder="Enter email address">
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
-                                                    type="text" name="b_9a9569371c11dac5da8c7856d_9930082c1c"
-                                                    tabindex="-1" value=""></div>
-                                        <div class="clear col-md-4 col-6"><input type="submit" value="Subscribe"
-                                                                                 name="subscribe"
-                                                                                 id="mc-embedded-subscribe"
-                                                                                 class="button btn_subscribe"></div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                       <img src="{{asset('img/welcome/women.png')}}" class="img-fluid hero-img" alt="" style="width:700px">
+                     </div>
+                     <div class="box col-lg-6">
+                      <div>
+                          <h1>Welcome to HIYA</h1>
+                          <h2>Join our community of Lebanese Women</h2>
+                          <p>Become a member of our network by sharing your email with us</p>
                     </div>
-
-                </div>
+                  </div>
+                  </div>
             </div>
 
         </section><!-- End Hero -->
@@ -52,9 +32,9 @@
                     </div>
                     <div class="row box">
                         <!-- <div class="col-lg-3" data-aos="zoom-in"></div> -->
-                        <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+                        <div class="col-lg-8 d-flex flex-column justify-contents-center" data-aos="fade-left">
                             <div class="content pt-3 pt-lg-0">
-                                <p class="justify">Hiya is a network of Lebanese women who empower and support each
+                                <p>Hiya is a network of Lebanese women who empower and support each
                                     other professionally, personally and socially.
                                     By standing as a united front helping and believing in one another we can flourish.
                                     Through this network, women with different or similar interests, skills, experiences
@@ -62,7 +42,7 @@
                                     We’re providing a trustworthy environment for women where they can share personal
                                     experiences and professional ambitions.
                                 </p>
-                                <p class="justify">
+                                <p>
                                     We want to break down barriers, destroy taboos and shape a new reality where women
                                     excel in every aspect of their lives. We aim to create a platform that goes beyond
                                     borders by empowering, nurturing and uniting women.
@@ -88,7 +68,6 @@
                         succeed.</p>
                 </div>
                 <div class="col-lg-3 col-md-6 txt-center" data-aos="fade-left">
-                    <img src="" class="img-fluid" alt="" width="100px">
                     <h4>Inclusivity</h4>
                     <p>We believe that every woman has her place in this network and can participate in our
                         improvement.</p>
@@ -107,10 +86,10 @@
     </section>
 
     <!-- =======  Section ======= -->
-    <section id="team" class="team">
+    <section id="team" class="team pt-5">
         <div class="container-fluid px-5">
 
-            <div class="section-title-white" data-aos="fade-up">
+            <div class="section-title-white pb-5" data-aos="fade-up">
                 <h2>Team</h2>
             </div>
 
@@ -358,13 +337,7 @@
 
                 <div class="container">
                     <div class="copyright">
-                        &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
-                    </div>
-                    <div class="credits">
-                        <!-- You can delete the links only if you purchased the pro version. -->
-                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        &copy; Copyright <strong><span>HIYA</span></strong>. All Rights Reserved
                     </div>
                 </div>
             </footer>
