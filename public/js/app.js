@@ -2095,8 +2095,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_countries_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data/countries.json */ "./resources/js/data/countries.json");
-var _data_countries_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../data/countries.json */ "./resources/js/data/countries.json", 1);
+/* harmony import */ var _data_countries_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../data/countries.json */ "./resources/js/data/countries.json");
+var _data_countries_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../data/countries.json */ "./resources/js/data/countries.json", 1);
 /* harmony import */ var _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/input-default.vue */ "./resources/js/components/forms/common/input-default.vue");
 //
 //
@@ -2140,7 +2140,7 @@ var _data_countries_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/_
   "extends": _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
-      countries: _data_countries_json__WEBPACK_IMPORTED_MODULE_2__
+      countries: _data_countries_json__WEBPACK_IMPORTED_MODULE_0__
     };
   }
 });
@@ -2156,8 +2156,8 @@ var _data_countries_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_currencies_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data/currencies.json */ "./resources/js/data/currencies.json");
-var _data_currencies_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../data/currencies.json */ "./resources/js/data/currencies.json", 1);
+/* harmony import */ var _data_currencies_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../data/currencies.json */ "./resources/js/data/currencies.json");
+var _data_currencies_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../data/currencies.json */ "./resources/js/data/currencies.json", 1);
 /* harmony import */ var _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/input-default.vue */ "./resources/js/components/forms/common/input-default.vue");
 //
 //
@@ -2202,7 +2202,7 @@ var _data_currencies_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/
   "extends": _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
-      currencies: _data_currencies_json__WEBPACK_IMPORTED_MODULE_2__
+      currencies: _data_currencies_json__WEBPACK_IMPORTED_MODULE_0__
     };
   }
 });
