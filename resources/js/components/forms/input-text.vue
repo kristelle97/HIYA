@@ -1,13 +1,13 @@
 <template>
     <ValidationProvider :class="[this.className,'form-group','row']"
          tag="div" :rules="validation"
-         v-slot="{ errors }" mode="lazy" :name="name">
+         v-slot="{ errors, valid }" mode="lazy" :name="name">
             <label class="col-md-4 col-form-label text-md-right" v-if="label" :for="name">
                 {{label}}
             </label>
             <div class="col-md-6">
                 <input :type="type"
-                       :class="{'form-control':true,'invalid':errors.length,'animated pulse':pulse&&errors.length}"
+                       :class="{'form-control':true,'invalid':!valid,'animated pulse':pulse&&!valid}"
                        :id="name"
                        :name="name"
                        :placeholder="placeholder"

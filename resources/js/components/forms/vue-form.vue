@@ -1,16 +1,23 @@
 <template>
-    <form class="vue-form" ref="form" :method="method=='GET'?'GET':'POST'" :action="action" @submit.prevent="beforeSubmit">
+    <ValidationObserver tag="form"
+                        class="vue-form"
+                        ref="form"
+                        :method="method=='GET'?'GET':'POST'"
+                        :action="action"
+                        @submit.prevent="beforeSubmit">
         <input type="hidden" name="_token" :value="csrf">
         <input type="hidden" name="_method" :value="method" v-if="method!='GET'&&method!='POST'">
         <slot :pulse="pulse"></slot>
-    </form>
+    </ValidationObserver>
 </template>
 
 <script>
-    import { ValidationProvider, ValidationObserver } from 'vee-validate';
-
+    import { ValidationObserver } from 'vee-validate';
 
     export default {
+        components: {
+            ValidationObserver
+        },
         props: {
             method: {required:false, type:String,default:'POST'},
             action: {required:false, type:String},
@@ -27,19 +34,20 @@
         },
         methods: {
             beforeSubmit() {
-                this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        if (this.callback!=null) {
-                            this.callback();
-                        } else {
-                            this.$refs.form.submit();
-                        }
-                        return;
+                const isValid = this.$refs.form.validate();
+                console.log(isValid)
+                if (isValid) {
+                    if (this.callback!=null) {
+                        this.callback();
                     } else {
-                        this.pulse = true;
-                        setTimeout(() => { this.pulse = false;}, 1000);
+                        this.$refs.form.submit();
                     }
-                });
+                    return;
+                } else {
+                    this.pulse = true;
+                    console.log("pulse")
+                    setTimeout(() => { this.pulse = false;}, 1000);
+                }
             }
         },
         computed: {
