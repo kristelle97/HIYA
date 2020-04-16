@@ -7,7 +7,7 @@
             </label>
             <div class="col-md-6">
                 <input :type="type"
-                       :class="{'form-control':true,'invalid':!valid,'animated pulse':pulse&&!valid}"
+                       :class="{'form-control':true,'invalid':!valid}"
                        :id="name"
                        :name="name"
                        :placeholder="placeholder"
@@ -18,9 +18,11 @@
                        @blur="$emit('blur')"
                        :disabled="disabled"
                 >
+                <transition name="fade">
                 <small v-if="errors.length" :id="name+'Error'" class="form-text text-danger">
                     <span v-for="error in errors">{{ error }}</span>
                 </small>
+                </transition>
             </div>
     </ValidationProvider>
 </template>

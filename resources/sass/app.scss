@@ -4,5 +4,12 @@
 // Variables
 @import 'variables';
 
+// Elem.io
+@import "~element-ui/packages/theme-chalk/src/index";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import './general.scss';
+@import './components.scss';
+@import './pages/welcome.scss';

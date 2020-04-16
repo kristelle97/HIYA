@@ -29,3 +29,11 @@ if (token) {
 /**
  * Vue tools
  */
+
+import ElementUI from 'element-ui';
+import langEn from 'element-ui/lib/locale/lang/en';
+import locale from 'element-ui/lib/locale';
+
+locale.use(langEn)
+window.Vue.use(ElementUI);
+
