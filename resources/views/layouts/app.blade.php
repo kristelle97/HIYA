@@ -25,6 +25,7 @@
 </div>
 
 <!-- Scripts -->
+<script src="https://kit.fontawesome.com/a05cbf66d2.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script type="application/javascript">
 

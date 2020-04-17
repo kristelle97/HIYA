@@ -11,10 +11,10 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                 </li>
+                <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -25,6 +25,9 @@
                         </li>
                     @endif
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">Members</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('profile.index') }}" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

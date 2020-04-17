@@ -33,6 +33,8 @@ if (token) {
 import ElementUI from 'element-ui';
 import langEn from 'element-ui/lib/locale/lang/en';
 import locale from 'element-ui/lib/locale';
+import 'element-ui/lib/theme-chalk/index.css';
+
 
 locale.use(langEn)
 window.Vue.use(ElementUI);
