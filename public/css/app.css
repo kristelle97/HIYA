@@ -10137,3 +10137,11 @@ h3 {
 .custom-page img, .custom-page iframe {
   max-width: 100%;
 }
+
+.post-header {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: -100px;
+}

@@ -30,7 +30,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "element-ui": "^2.13.0",
+        "element-ui": "^2.13.1",
         "vee-validate": "^3.2.5",
         "vue2-editor": "^2.10.2"
     }

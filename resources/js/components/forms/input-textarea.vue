@@ -5,7 +5,7 @@
         <label class="col-md-4 col-form-label text-md-right" v-if="label" :for="name">
             {{label}}
         </label>
-        <div class="col-md-6">
+        <div :class="{'col-md-6':label,'col':!label}">
             <textarea :type="type"
                    :class="{'form-control':true,'invalid':!valid}"
                    :id="name"

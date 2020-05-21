@@ -26,6 +26,13 @@ Route::get( '/page/{slug}', 'PageController@show' )->name( 'page.show' );
 Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
     Route::get( '/', 'BlogController@index' )->name( 'index' );
 });
+Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
+    Route::get( '/', 'JobController@index' )->name( 'index' );
+});
+Route::group([ 'prefix' => 'women', 'as' => 'women.' ],function() {
+    Route::get( '/', 'WomenController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'WomenController@show' )->name( 'show' );
+});
 
 /**
  * Auth Routes
@@ -38,7 +45,12 @@ Route::middleware( 'auth' )->group( function () {
         Route::post( '/', 'ProfileController@update' )->name( 'update' );
     });
 
+    Route::post( 'post/{id}/comment', 'BlogController@comment' )->name( 'post.comment' );
+    Route::delete( 'post/comment/{id}', 'BlogController@delete' )->name( 'post.comment.delete' );
     Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
         Route::get( '/{slug}', 'BlogController@show' )->name( 'show' );
+    });
+    Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
+        Route::get( '/{slug}', 'JobController@show' )->name( 'show' );
     });
 } );

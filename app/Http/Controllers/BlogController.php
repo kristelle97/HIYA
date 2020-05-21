@@ -2,32 +2,83 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\PostComment;
 use Illuminate\Http\Request;
-use Wink\WinkPost;
 
 class BlogController extends Controller
 {
-    public function index(  )
+    public function index()
     {
-        $posts = WinkPost::with('tags')
-                         ->live()
-                         ->orderBy('publish_date', 'DESC')
-                         ->simplePaginate(12);
+        $posts = Post::with( 'tags' )
+                     ->whereDoesntHave( 'tags', function ( $query ) {
+                         $query->whereIn( 'name', [ JobController::JOBS_POST_TAG, WomenController::WOMEN_POST_TAG ] );
+                     } )
+                     ->live()
+                     ->orderBy( 'publish_date', 'DESC' )
+                     ->simplePaginate( 12 );
 
-        return view('blog.index', [
+        return view( 'blog.index', [
             'posts' => $posts
-        ]);
+        ] );
     }
 
     public function show( $slug )
     {
-        $this->middleware('auth');
+        $this->middleware( 'auth' );
 
-        $post = WinkPost::with('tags')
-                        ->live()
-                        ->whereSlug($slug)
-                        ->firstOrFail();
+        $post = Post::with( ['tags','comments.author'] )
+                    ->whereDoesntHave( 'tags', function ( $query ) {
+                        $query->whereIn( 'name', [ JobController::JOBS_POST_TAG, WomenController::WOMEN_POST_TAG ] );
+                    } )->live()
+                    ->whereSlug( $slug )
+                    ->firstOrFail();
 
-        return view('blog.show', compact('post'));
+        return view( 'blog.show', compact( 'post' ) );
+    }
+
+    public function comment( Request $request, $id )
+    {
+        $this->middleware( 'auth' );
+
+        $request->validate( [
+            'content' => 'required|string'
+        ] );
+
+        $post = Post::find( $id );
+        if ( !$post ) {
+            flash()->success('Post not found.');
+            return redirect()->back();
+        }
+
+        PostComment::create( [
+            'user_id' => \Auth::id(),
+            'post_id' => $post->id,
+            'content' => $request->content
+        ] );
+
+        flash()->success('Comment published.');
+
+        return redirect()->back();
+    }
+
+    public function delete( $id )
+    {
+        $comment = PostComment::find( $id );
+        if ( !$comment ) {
+            flash()->success('Comment not found.');
+            return redirect()->back();
+        }
+
+        if ($comment->author->id != \Auth::id() && !\Auth::user()->admin){
+            flash()->warning('Unauthorized.');
+            return redirect()->back();
+        }
+
+        $comment->delete();
+
+        flash()->success('Comment deleted.');
+
+        return redirect()->back();
     }
 }

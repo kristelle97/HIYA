@@ -14,6 +14,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('jobs.index') }}">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('women.index') }}">Our Women</a>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

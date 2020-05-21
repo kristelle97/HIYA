@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\PostComment;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,7 +49,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
     /**
      * Mutators
      */
@@ -72,5 +73,17 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
         return SlugOptions::create()
                           ->generateSlugsFrom(['first_name', 'last_name'])
                           ->saveSlugsTo('slug');
+    }
+
+    public function getFullNameAttribute(  )
+    {
+        return $this->first_name .' '. $this->last_name;
+    }
+
+    /**
+     * Relationships
+     */
+    public function comments() {
+        return $this->hasMany(PostComment::class);
     }
 }

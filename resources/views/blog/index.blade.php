@@ -11,6 +11,11 @@
 
             <div class="row">
                 <div class="container pb-4">
+                    @if (count($posts)==0)
+                        <p class="text-center">
+                            Nothing here yet !
+                        </p>
+                    @endif
 
                     @foreach($posts as $post)
                         <div class="card card-blog-post mb-4">
