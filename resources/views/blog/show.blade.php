@@ -30,6 +30,8 @@
                         </div>
 
                         {!! $post->body !!}
+
+                        @include('components.blog.likes')
                     </div>
 
                 </div>
@@ -40,7 +42,7 @@
                     </a>
                 </div>
 
-                @include('components.comments')
+                @include('components.blog.comments')
 
             </div>
         </div>

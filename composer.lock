@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea5134526e11824117e7de410d156495",
+    "content-hash": "f27299e72aee51682db13efcc686dfe5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -237,42 +237,6 @@
                 "vue"
             ],
             "time": "2020-03-09T23:43:13+00:00"
-        },
-        {
-            "name": "devdojo/chatter",
-            "version": "0.2.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thedevdojo/chatter.git",
-                "reference": "ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thedevdojo/chatter/zipball/ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61",
-                "reference": "ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61",
-                "shasum": ""
-            },
-            "require-dev": {
-                "illuminate/cache": "~5.1.20|5.2.*|5.3.*",
-                "illuminate/console": "~5.1.20|5.2.*|5.3.*",
-                "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "~5.7.14"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DevDojo\\Chatter\\": "/src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Tony Lea",
-                    "email": "tony@devdojo.com"
-                }
-            ],
-            "description": "A simple forum package for your laravel app",
-            "time": "2017-03-12T21:13:57+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2280,6 +2244,70 @@
             "time": "2020-03-29T20:13:32+00:00"
         },
         {
+            "name": "rtconner/laravel-likeable",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rtconner/laravel-likeable.git",
+                "reference": "9c065dd204453103588910675c7f4e841ca2b811"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rtconner/laravel-likeable/zipball/9c065dd204453103588910675c7f4e841ca2b811",
+                "reference": "9c065dd204453103588910675c7f4e841ca2b811",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": ">=5.0|^6.0|^7.0",
+                "illuminate/support": ">=5.0|^6.0|^7.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "1.*",
+                "orchestra/testbench": "5.*",
+                "phpunit/phpunit": "8.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Conner\\Likeable\\LikeableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Conner\\Likeable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Conner",
+                    "email": "rtconner@smarter.bz"
+                }
+            ],
+            "description": "Trait for Laravel Eloquent models to allow easy implementation of a 'like' or 'favorite' or 'remember' feature.",
+            "homepage": "https://smartersoftware.net/packages/laravel-likeable-favorite",
+            "keywords": [
+                "Follow",
+                "eloquent",
+                "favorite",
+                "favourite",
+                "laravel",
+                "laravel5",
+                "likable",
+                "like",
+                "likeable",
+                "remember",
+                "trait"
+            ],
+            "time": "2020-03-02T19:04:50+00:00"
+        },
+        {
             "name": "spatie/laravel-sluggable",
             "version": "2.2.2",
             "source": {
@@ -3918,6 +3946,7 @@
                 "framework",
                 "laravel"
             ],
+            "abandoned": "themsaid/wink",
             "time": "2020-03-06T05:09:18+00:00"
         }
     ],
@@ -4410,6 +4439,42 @@
                 "performance"
             ],
             "time": "2020-03-01T12:26:26+00:00"
+        },
+        {
+            "name": "devdojo/chatter",
+            "version": "0.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/chatter.git",
+                "reference": "ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thedevdojo/chatter/zipball/ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61",
+                "reference": "ca1b4d6e76dacbd77867d046f9bdcca0b6a75f61",
+                "shasum": ""
+            },
+            "require-dev": {
+                "illuminate/cache": "~5.1.20|5.2.*|5.3.*",
+                "illuminate/console": "~5.1.20|5.2.*|5.3.*",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "~5.7.14"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DevDojo\\Chatter\\": "/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tony Lea",
+                    "email": "tony@devdojo.com"
+                }
+            ],
+            "description": "A simple forum package for your laravel app",
+            "time": "2017-03-12T21:13:57+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -6986,5 +7051,6 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

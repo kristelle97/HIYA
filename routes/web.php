@@ -45,7 +45,9 @@ Route::middleware( 'auth' )->group( function () {
         Route::post( '/', 'ProfileController@update' )->name( 'update' );
     });
 
+    Route::post( 'post/{id}/like', 'BlogController@like' )->name( 'post.like' );
     Route::post( 'post/{id}/comment', 'BlogController@comment' )->name( 'post.comment' );
+    Route::post( 'post/comment/{id}/like', 'BlogController@likeComment' )->name( 'post.comment.like' );
     Route::delete( 'post/comment/{id}', 'BlogController@delete' )->name( 'post.comment.delete' );
     Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
         Route::get( '/{slug}', 'BlogController@show' )->name( 'show' );

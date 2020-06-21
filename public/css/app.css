@@ -10145,3 +10145,7 @@ h3 {
   background-position: center center;
   margin-bottom: -100px;
 }
+
+.likes form {
+  display: inline;
+}

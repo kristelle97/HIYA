@@ -3,11 +3,15 @@
 namespace App\Models;
 
 use App\User;
+use Conner\Likeable\Like;
+use Conner\Likeable\Likeable;
+use Conner\Likeable\LikeCounter;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PostComment extends Model
 {
+    use Likeable;
 
     use SoftDeletes;
 

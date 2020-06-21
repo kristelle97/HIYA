@@ -37,6 +37,29 @@ class BlogController extends Controller
         return view( 'blog.show', compact( 'post' ) );
     }
 
+    public function like( Request $request, $id )
+    {
+        $this->middleware( 'auth' );
+
+        $post = Post::find( $id );
+        if ( !$post ) {
+            flash()->success('Post not found.');
+            return redirect()->back();
+        }
+
+        if ($post->liked() ) {
+            flash()->success('Comment unliked.');
+            $post->unlike();
+        } else {
+            flash()->success('Comment liked.');
+            $post->like();
+        }
+
+        flash()->success('Post liked.');
+
+        return redirect()->back();
+    }
+
     public function comment( Request $request, $id )
     {
         $this->middleware( 'auth' );
@@ -58,6 +81,27 @@ class BlogController extends Controller
         ] );
 
         flash()->success('Comment published.');
+
+        return redirect()->back();
+    }
+
+    public function likeComment( Request $request, $id )
+    {
+        $this->middleware( 'auth' );
+
+        $comment = PostComment::find( $id );
+        if ( !$comment ) {
+            flash()->success('Comment not found.');
+            return redirect()->back();
+        }
+
+        if ($comment->liked() ) {
+            flash()->success('Comment unliked.');
+            $comment->unlike();
+        } else {
+            flash()->success('Comment liked.');
+            $comment->like();
+        }
 
         return redirect()->back();
     }

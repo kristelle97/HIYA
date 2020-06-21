@@ -11,13 +11,17 @@
                             <p class="mb-0">
                                 {{$comment->content}}
                             </p>
-                            @if($comment->author->id == \Auth::id() || \Auth::user()->admin)
-                                <vue-form class="text-right" method="delete" action="{{route('post.comment.delete',[
+                            <div class="d-flex mt-4">
+                                @include('components.blog.comment-likes')
+
+                                @if($comment->author->id == \Auth::id() || \Auth::user()->admin)
+                                    <vue-form class="text-right" method="delete" action="{{route('post.comment.delete',[
                                     'id' => $comment->id
                                 ])}}">
-                                    <button type="submit" class="btn btn-link">Delete</button>
-                                </vue-form>
-                            @endif
+                                        <button type="submit" class="btn btn-link">Delete</button>
+                                    </vue-form>
+                                @endif
+                            </div>
                         </li>
                     @endforeach
                 </ul>

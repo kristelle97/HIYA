@@ -22,6 +22,8 @@
                         <p class="text-center">{{ $post->publish_date->format('dS M Y') }}</p>
 
                         {!! $post->body !!}
+
+                        @include('components.blog.likes')
                     </div>
 
                 </div>
@@ -30,7 +32,7 @@
                     <a class="text-dark" href="{{route('women.index')}}"><i class="fas fa-arrow-left"></i> All Women</a>
                 </div>
 
-                @include('components.comments')
+                @include('components.blog.comments')
             </div>
         </div>
     </div>

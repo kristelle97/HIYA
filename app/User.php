@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\PostComment;
+use Conner\Likeable\Likeable;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,7 +13,7 @@ use Spatie\Sluggable\SlugOptions;
 
 class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
 {
-    use Notifiable, HasSlug;
+    use Notifiable, HasSlug, Likeable;
 
     /**
      * The attributes that are mass assignable.

@@ -19,6 +19,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "rtconner/laravel-likeable": "~3.0",
         "spatie/laravel-sluggable": "^2.2",
         "writingink/wink": "^0.2.0"
     },
