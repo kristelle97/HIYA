@@ -4328,6 +4328,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -89716,7 +89717,8 @@ var render = function() {
           ref: "form",
           attrs: {
             method: _vm.method == "GET" ? "GET" : "POST",
-            action: _vm.action
+            action: _vm.action,
+            enctype: "multipart/form-data"
           },
           on: {
             submit: function($event) {

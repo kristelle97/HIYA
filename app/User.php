@@ -55,9 +55,13 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      * Mutators
      */
 
-    public function getProfileCompletedAttribute(  )
+    public function getPictureUrlAttribues(  )
     {
-        // TODO
+        $url = $this->attributes['picture_url'];
+        if ($url == null || $url =='') {
+            return '/img/avatar-placeholder.jpg';
+        }
+        return $url;
     }
 
     /**

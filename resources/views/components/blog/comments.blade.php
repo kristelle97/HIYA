@@ -6,7 +6,9 @@
                     @foreach($post->comments as $comment)
 
                         <li class="list-group-item">
-                            <p class="mb-0"><b>{{$comment->author->full_name}}</b> -
+                            <p class="mb-0">
+                                <img src="{{$comment->author->picture_url}}" class="author-picture"/>
+                                <b>{{$comment->author->full_name}}</b> -
                                 <span class="text-secondary">{{$comment->created_at->diffForHumans()}}</span></p>
                             <p class="mb-0">
                                 {{$comment->content}}

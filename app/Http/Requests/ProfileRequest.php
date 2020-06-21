@@ -24,7 +24,11 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            ''
+            'photo'                => 'mimes:jpeg,jpg,png|max:5120',
+            'job_position'         => 'string',
+            'work_area'            => 'string',
+            'country_of_residence' => 'string',
+            'description'          => 'string'
         ];
     }
 }

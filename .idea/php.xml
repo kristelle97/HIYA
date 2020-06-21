@@ -117,6 +117,7 @@
       <path value="$PROJECT_DIR$/vendor/devdojo/chatter" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/rtconner/laravel-likeable" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

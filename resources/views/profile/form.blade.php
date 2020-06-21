@@ -9,10 +9,17 @@
 
                     <div class="card-body">
 
+                        <img class="mx-auto rounded d-block mb-3" src="{{Auth::user()->picture_url}}"/>
+
                         <p>These information will be shared with the other Hiya members. Note that we will never share
                             your contact details directly.</p>
 
                         <vue-form method="POST" action="{{route('profile.update')}}">
+                            <input-text name="photo"
+                                        type="file"
+                                        default-value="{{Auth::user()->photo}}"
+                                        label="Photo"
+                                        placeholder="Upload a picture of you"></input-text>
                             <input-text name="job_position"
                                         default-value="{{Auth::user()->job_position}}"
                                         label="Job Position"

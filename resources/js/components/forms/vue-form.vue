@@ -6,6 +6,7 @@
         <form ref="form"
               :method="method=='GET'?'GET':'POST'"
               :action="action"
+              enctype="multipart/form-data"
               @submit.prevent="beforeSubmit">
             <input type="hidden" name="_token" :value="csrf">
             <input type="hidden" name="_method" :value="method" v-if="method!='GET'&&method!='POST'">
