@@ -38,13 +38,20 @@ Route::group([ 'prefix' => 'women', 'as' => 'women.' ],function() {
  * Auth Routes
  */
 Route::middleware( 'auth' )->group( function () {
-    Route::get( '/home', 'HomeController@index' )->name( 'home' );
+    Route::redirect('/home', '/members')->name( 'home' );
 
+    // Profile
     Route::group([ 'prefix' => 'profile', 'as' => 'profile.' ],function() {
         Route::get( '/', 'ProfileController@index' )->name( 'index' );
         Route::post( '/', 'ProfileController@update' )->name( 'update' );
     });
 
+    // Members
+    Route::group([ 'prefix' => 'members', 'as' => 'members.' ],function() {
+        Route::get( '/', 'MemberController@index' )->name( 'index' );
+    });
+
+    // Posts
     Route::post( 'post/{id}/like', 'BlogController@like' )->name( 'post.like' );
     Route::post( 'post/{id}/comment', 'BlogController@comment' )->name( 'post.comment' );
     Route::post( 'post/comment/{id}/like', 'BlogController@likeComment' )->name( 'post.comment.like' );

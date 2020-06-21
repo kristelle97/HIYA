@@ -55,7 +55,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      * Mutators
      */
 
-    public function getPictureUrlAttribues(  )
+    public function getPictureUrlAttribute(  )
     {
         $url = $this->attributes['picture_url'];
         if ($url == null || $url =='') {

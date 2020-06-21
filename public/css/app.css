@@ -9988,6 +9988,16 @@ h3 {
   margin: 0px 10px;
 }
 
+.user-card {
+  margin-top: 60px;
+  height: calc(100% - 60px);
+}
+.user-card .user-image {
+  width: 120px;
+  border-radius: 60px;
+  margin-top: -60px;
+}
+
 #about {
   color: white;
   background-color: #89c5cc;
