@@ -10,7 +10,7 @@
                :value="value"
                :ref="name"
         >
-        <div class="col-md-6">
+        <div :class="{'col-md-6':label,'col-md-12':!label}">
             <el-select v-model="value" filterable
                        :id="name"
                        :placeholder="placeholder"
@@ -21,6 +21,12 @@
                        @blur="$emit('blur')"
                        :disabled="disabled"
             >
+                <el-option
+                    v-if="allowAny"
+                    label="All"
+                    value="all">
+                    All
+                </el-option>
                 <el-option
                         v-for="country in countries"
                         :key="country.name_en"
@@ -44,6 +50,9 @@
     import CommonInput from './common/input-default.vue';
 
     export default {
+        props: {
+            allowAny: {type:Boolean,default:false}
+        },
         extends: CommonInput,
         data() {
             return {

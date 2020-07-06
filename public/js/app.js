@@ -3779,9 +3779,21 @@ var _data_countries_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/_
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    allowAny: {
+      type: Boolean,
+      "default": false
+    }
+  },
   "extends": _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
@@ -4281,9 +4293,21 @@ var _data_work_areas_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    allowAny: {
+      type: Boolean,
+      "default": false
+    }
+  },
   "extends": _common_input_default_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
@@ -4329,6 +4353,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -4348,6 +4373,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       required: false,
       type: Function,
       "default": null
+    },
+    formClass: {
+      type: String
     }
   },
   data: function data() {
@@ -88684,7 +88712,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-md-6" },
+              { class: { "col-md-6": _vm.label, "col-md-12": !_vm.label } },
               [
                 _c(
                   "el-select",
@@ -88714,36 +88742,46 @@ var render = function() {
                       expression: "value"
                     }
                   },
-                  _vm._l(_vm.countries, function(country) {
-                    return _c(
-                      "el-option",
-                      {
-                        key: country.name_en,
-                        attrs: {
-                          label: country.name_en,
-                          value: country.name_en
-                        }
-                      },
-                      [
-                        _c("span", { staticStyle: { float: "left" } }, [
-                          _vm._v(_vm._s(country.name_en))
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticStyle: {
-                              float: "right",
-                              color: "#8492a6",
-                              "font-size": "13px"
-                            }
-                          },
-                          [_vm._v(_vm._s(country.code_iso3))]
+                  [
+                    _vm.allowAny
+                      ? _c(
+                          "el-option",
+                          { attrs: { label: "All", value: "all" } },
+                          [_vm._v("\n                All\n            ")]
                         )
-                      ]
-                    )
-                  }),
-                  1
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._l(_vm.countries, function(country) {
+                      return _c(
+                        "el-option",
+                        {
+                          key: country.name_en,
+                          attrs: {
+                            label: country.name_en,
+                            value: country.name_en
+                          }
+                        },
+                        [
+                          _c("span", { staticStyle: { float: "left" } }, [
+                            _vm._v(_vm._s(country.name_en))
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticStyle: {
+                                float: "right",
+                                color: "#8492a6",
+                                "font-size": "13px"
+                              }
+                            },
+                            [_vm._v(_vm._s(country.code_iso3))]
+                          )
+                        ]
+                      )
+                    })
+                  ],
+                  2
                 ),
                 _vm._v(" "),
                 _c("transition", { attrs: { name: "fade" } }, [
@@ -89308,7 +89346,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-md-6" },
+              { class: { "col-md-6": _vm.label, "col-md-12": !_vm.label } },
               [
                 _vm.type === "checkbox"
                   ? _c("input", {
@@ -89622,7 +89660,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-md-6" },
+              { class: { "col-md-6": _vm.label, "col-md-12": !_vm.label } },
               [
                 _c(
                   "el-select",
@@ -89652,13 +89690,23 @@ var render = function() {
                       expression: "value"
                     }
                   },
-                  _vm._l(_vm.work_areas, function(area) {
-                    return _c("el-option", {
-                      key: area,
-                      attrs: { label: area, value: area }
+                  [
+                    _vm.allowAny
+                      ? _c(
+                          "el-option",
+                          { attrs: { label: "All", value: "all" } },
+                          [_vm._v("\n                All\n            ")]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._l(_vm.work_areas, function(area) {
+                      return _c("el-option", {
+                        key: area,
+                        attrs: { label: area, value: area }
+                      })
                     })
-                  }),
-                  1
+                  ],
+                  2
                 ),
                 _vm._v(" "),
                 _c("transition", { attrs: { name: "fade" } }, [
@@ -89715,8 +89763,9 @@ var render = function() {
         "form",
         {
           ref: "form",
+          class: _vm.formClass,
           attrs: {
-            method: _vm.method == "GET" ? "GET" : "POST",
+            method: _vm.method,
             action: _vm.action,
             enctype: "multipart/form-data"
           },
@@ -89728,10 +89777,12 @@ var render = function() {
           }
         },
         [
-          _c("input", {
-            attrs: { type: "hidden", name: "_token" },
-            domProps: { value: _vm.csrf }
-          }),
+          _vm.method != "GET"
+            ? _c("input", {
+                attrs: { type: "hidden", name: "_token" },
+                domProps: { value: _vm.csrf }
+              })
+            : _vm._e(),
           _vm._v(" "),
           _vm.method != "GET" && _vm.method != "POST"
             ? _c("input", {

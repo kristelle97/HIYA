@@ -3,9 +3,9 @@
         <vue-form methode="POST" action="{{route('post.comment.like',$comment->id)}}" class="d-inline">
             <button class="btn btn-sm btn-outline-dark" type="submit">
                 @if($comment->liked())
-                    <i class="fas fa-thumbs-down"></i> Unlike
+                    👎 Unlike
                 @else
-                    <i class="fas fa-thumbs-up"></i> Like
+                    👍 Like
                 @endif
             </button>
         </vue-form>

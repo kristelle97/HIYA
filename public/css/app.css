@@ -9988,14 +9988,17 @@ h3 {
   margin: 0px 10px;
 }
 
-.user-card {
+.user-card, .profile-card {
   margin-top: 60px;
-  height: calc(100% - 60px);
 }
-.user-card .user-image {
+.user-card .user-image, .profile-card .user-image {
   width: 120px;
   border-radius: 60px;
   margin-top: -60px;
+}
+
+.user-card {
+  height: calc(100% - 60px);
 }
 
 #about {

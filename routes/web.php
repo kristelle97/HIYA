@@ -49,6 +49,13 @@ Route::middleware( 'auth' )->group( function () {
     // Members
     Route::group([ 'prefix' => 'members', 'as' => 'members.' ],function() {
         Route::get( '/', 'MemberController@index' )->name( 'index' );
+        Route::get( '/{slug}', 'MemberController@show' )->name( 'show' );
+        Route::post( '/{slug}/clap/', 'MemberController@clap' )->name( 'clap' );
+    });
+
+    // Contact
+    Route::group([ 'prefix' => 'contact', 'as' => 'contact.' ],function() {
+        Route::post( '/', 'ContactController@store' )->name( 'store' );
     });
 
     // Posts

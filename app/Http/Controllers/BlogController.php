@@ -48,14 +48,12 @@ class BlogController extends Controller
         }
 
         if ($post->liked() ) {
-            flash()->success('Comment unliked.');
+            flash()->success('Post unliked.');
             $post->unlike();
         } else {
-            flash()->success('Comment liked.');
+            flash()->success('Post liked.');
             $post->like();
         }
-
-        flash()->success('Post liked.');
 
         return redirect()->back();
     }
