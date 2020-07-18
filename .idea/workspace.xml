@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f852b9d3-d854-497b-a233-750fe2cbd03d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/member/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a0ac0c1-09a5-4724-ba44-bae297f6e0b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a0ac0c1-09a5-4724-ba44-bae297f6e0b4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a0ac0c1-09a5-4724-ba44-bae297f6e0b4/storage_v2/_src_/database/hiya.yd8wAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a0ac0c1-09a5-4724-ba44-bae297f6e0b4/storage_v2/_src_/database/hiya.yd8wAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/input-country.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/input-country.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/input-text.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/input-text.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/input-work-area.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/input-work-area.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/vue-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/vue-form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/blog/comment-likes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/blog/comment-likes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/blog/likes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/blog/likes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/members/user-card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/members/user-card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/member/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/member/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +208,8 @@
       <workItem from="1589992978699" duration="2914000" />
       <workItem from="1592154109351" duration="2060000" />
       <workItem from="1592750595671" duration="10263000" />
-      <workItem from="1594050877490" duration="5981000" />
+      <workItem from="1594050877490" duration="10444000" />
+      <workItem from="1595013265874" duration="626000" />
     </task>
     <servers />
   </component>
