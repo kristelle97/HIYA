@@ -54,20 +54,20 @@ class MemberController extends Controller
     private function filterUsersQuery($search) {
         $query = User::query();
 
-        $search = $search['search'] ?? null;
-        if ($search!='' && $search!= null) {
-            $query = $query->where('first_name','ilike',"%${search}%")
-                ->orWhere('last_name','ilike',"%${search}%");
+        $searchValue = $search['search'] ?? null;
+        if ($searchValue!='' && $searchValue!= null) {
+            $query = $query->where('first_name','ilike',"%${searchValue}%")
+                ->orWhere('last_name','ilike',"%${searchValue}%");
         }
 
         $workArea = $search['work_area'] ?? null;
         if ($workArea!='' && $workArea!= null && $workArea != 'all') {
-            $query = $query->where('work_area',$workArea);
+            $query = $query->where('work_area',$workArea)->whereNotNull('work_area');
         }
 
         $country = $search['country_of_residence'] ?? null;
         if ($country!='' && $country!= null && $country != 'all') {
-            $query = $query->where('country_of_residence',$country);
+            $query = $query->where('country_of_residence',$country)->whereNotNull('work_area');;
         }
 
         return $query;

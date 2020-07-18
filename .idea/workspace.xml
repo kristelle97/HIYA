@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f852b9d3-d854-497b-a233-750fe2cbd03d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,22 +159,22 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/member" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/assets/img" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
-      <recent name="$PROJECT_DIR$/resources/views/components/blog" />
-      <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/assets/img" />
       <recent name="$PROJECT_DIR$/resources/views/member" />
       <recent name="$PROJECT_DIR$/resources/views/components/members" />
       <recent name="$PROJECT_DIR$/resources/views/components/blog" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
-      <recent name="$PROJECT_DIR$/resources/views/blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
+      <recent name="$PROJECT_DIR$/resources/views/components/blog" />
+      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
   <component name="RunManager">
@@ -209,7 +210,7 @@
       <workItem from="1592154109351" duration="2060000" />
       <workItem from="1592750595671" duration="10263000" />
       <workItem from="1594050877490" duration="10444000" />
-      <workItem from="1595013265874" duration="626000" />
+      <workItem from="1595013265874" duration="949000" />
     </task>
     <servers />
   </component>
