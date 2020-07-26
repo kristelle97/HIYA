@@ -1,175 +1,32 @@
 #welcome {
 
-}
+    #hero {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-#about{
-  color:white;
-  h2{
-    text-align: center;
-  }
-  p{
-    text-align:justify;
-  }
-  background-color: #89c5cc;
-  background-image: url("img/welcome/women_outline.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding:60px 50px;
-}
+        background: linear-gradient(
+                rgba(255, 255, 255, 0.65),
+                rgba(255, 255, 255, 0.65)
+        ), url('../img/welcome/bg.jpg');
+        background-size: cover;
 
-#values{
-  h2{
-    text-align: center;
-  }
-  p{
-    text-align:justify;
-  }
-}
-
-#team{
-  background-color: #89c5cc;
-  color:white;
-  text-align: center;
-  .container {
-    background-color: #eef5f6;
-    padding: 60px 50px;
-    position: relative;
-    z-index: 10;
-  }
-
-  .member {
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-  }
-
-  .member .pic {
-    overflow: hidden;
-  }
-
-  .member .member-info {
-    position: absolute;
-    top: 85%;
-    left: 20px;
-    right: 20px;
-    background: #fff;
-    padding: 20px 0;
-    color: #364146;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    max-height: 95px;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-  }
-
-  .member:hover .member-info {
-    max-height: 300px;
-  }
-
-  .member h4 {
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #364146;
-    position: relative;
-    padding-bottom: 10px;
-  }
-
-  .member h4::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: #b5c1c6;
-    bottom: 0;
-    left: calc(50% - 25px);
-  }
-
-  .member span {
-    font-style: italic;
-    display: block;
-    font-size: 13px;
-  }
-
-  .member .social {
-    margin-top: 15px;
-  }
-
-  .member .social a {
-    transition: color 0.3s;
-    color: #627680;
-  }
-
-  .member .social a:hover {
-    color: #009cea;
-  }
-
-  .member .social i {
-    font-size: 16px;
-    margin: 0 2px;
-  }
-
-  @media (max-width: 992px) {
-    .member {
-      margin-bottom: 110px;
+        .logo {
+            max-width: 220px;
+            width: 50%;
+        }
     }
-  }
+
+    #how-does-it-work {
+        background-color: white;
+    }
+
+    #definition {
+        background-color: $purple;
+    }
+
+
+
 }
 
-#partner{
-  img{
-    max-width:100%;
-    max-height:100%;
-  }
-}
-
-#faq{
-
-  padding: 60px 0;
-
-  .faq-list {
-    padding: 0;
-    list-style: none;
-  }
-
-  .faq-list li {
-    padding: 0 0 20px 25px;
-  }
-
-  .faq-list a {
-    display: block;
-    position: relative;
-    font-family: #009cea;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .faq-list i {
-    font-size: 18px;
-    position: absolute;
-    left: -25px;
-    top: 6px;
-  }
-
-  .faq-list p {
-    margin-bottom: 20px;
-    font-size: 15px;
-  }
-
-  .faq-list a.collapse {
-    color: #009cea;
-  }
-
-  .faq-list a.collapsed {
-    color: #343a40;
-  }
-
-  .faq-list a.collapsed:hover {
-    color: #009cea;
-  }
-
-  .faq-list a.collapsed i::before {
-    content: "\eab2" !important;
-  }
-}

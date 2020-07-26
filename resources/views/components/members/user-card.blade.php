@@ -29,7 +29,7 @@
         <div class="actions text-center">
             <vue-form class="d-inline" form-class="d-inline" method="POST"
                       action="{{route('members.clap',['slug'=>$user->slug])}}">
-                <button type="submit" class="btn btn-outline-dark">
+                <button type="submit" class="btn btn-outline-secondary">
                     @if($user->liked())
                         👏 Un-Applaude
                     @else
@@ -37,7 +37,7 @@
                     @endif
                 </button>
             </vue-form>
-            <a href="{{route('members.show',['slug'=>$user->slug])}}" class="btn btn-outline-dark">✉️ Contact</a>
+            <a href="{{route('members.show',['slug'=>$user->slug])}}" class="btn btn-outline-secondary">✉️ Contact</a>
         </div>
     </div>
 </div>

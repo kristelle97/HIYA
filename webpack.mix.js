@@ -17,4 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
     processCssUrls: false,
 }).version();
 
-mix.copy('resources/assets/img', 'public/img');
+mix.copy('resources/assets/img', 'public/img')
+    .copy('resources/assets/sound', 'public/sound')
+    .copy('resources/assets/font', 'public/font');

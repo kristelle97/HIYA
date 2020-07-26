@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{ route('jobs.index') }}">Jobs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('women.index') }}">Our Women</a>
+                    <a class="nav-link" href="{{ route('women.index') }}">Women of Intami</a>
                 </li>
                 <!-- Authentication Links -->
                 @guest

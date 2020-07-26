@@ -1,4 +1,14 @@
 
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    #main-page-content {
+        flex-grow: 1;
+    }
+}
+
 .navbar {
   .navbar-nav {
     flex-direction: row;
@@ -21,4 +31,14 @@
 
 .user-card {
     height: calc(100% - 60px);
+}
+
+
+footer {
+    background-color: white;
+
+    .logo {
+        width: 100%;
+        max-width: 150px;;
+    }
 }
