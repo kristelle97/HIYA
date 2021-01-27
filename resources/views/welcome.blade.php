@@ -156,7 +156,7 @@
                         </a>
                         <h5 class="mb-4 text-4xl font-extrabold leading-none">
                             Who we
-                            <span class="inline-block text-blue-intami">are</span>
+                            <span class="inline-block text-blue-500">are</span>
                         </h5>
                         <p class="mb-6 text-gray-900">
                             Intami is an initiative launched by 8 young lebanese women. It is a network that brings
@@ -215,7 +215,7 @@
                                 Intami <small class="ml-2"> - <span class="text-blue-500">verb</span></small>
                             </h2>
                             <p class="">
-                                Translates to <span class="text-blue-intami">“belong”</span> in Arabic. It means to be a part of a group or an
+                                Translates to <span class="text-blue-500">“belong”</span> in Arabic. It means to be a part of a group or an
                                 organisation
                             </p>
                             <h3 class="mt-5 font-semibold">Why Intami ?</h3>
