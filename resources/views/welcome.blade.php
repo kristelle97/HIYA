@@ -5,7 +5,7 @@
         <!-- ======= Hero Section ======= -->
         <section class="relative">
             <img src="{{asset('img/welcome/bg.jpg')}}" class="absolute inset-0 object-cover w-full h-full" alt=""/>
-            <div class="relative bg-opacity-75 bg-brick">
+            <div class="relative bg-opacity-75 bg-blue-intami">
                 <svg class="absolute inset-x-0 -bottom-1 text-white" viewBox="0 0 1160 163">
                     <path
                         fill="currentColor"
@@ -28,7 +28,7 @@
                         </div>
                         <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
                             <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
-                                <img src="{{asset('img/logo.png')}}" class="logo w-40 mx-auto mb-5" alt="Intami Logo"/>
+                                <img src="{{asset('img/logo.svg')}}" class="logo w-40 mx-auto mb-5" alt="Intami Logo"/>
                                 @guest
                                     <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                                         Join us for free now
@@ -37,7 +37,7 @@
                                         <a
                                             href="{{route('register')}}"
                                             type="submit"
-                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-brick hover:bg-brick-light focus:shadow-outline focus:outline-none"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-300 focus:shadow-outline focus:outline-none"
                                         >
                                             Sign up
                                         </a>
@@ -48,7 +48,7 @@
                                         <a
                                             href="{{route('members.index')}}"
                                             type="submit"
-                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-brick hover:bg-brick-light focus:shadow-outline focus:outline-none"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-300 focus:shadow-outline focus:outline-none"
                                         >
                                             Our Members
                                         </a>
@@ -68,7 +68,7 @@
                     <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center sm:text-left">
                       <span class="relative inline-block">
                         <svg viewBox="0 0 52 24" fill="currentColor"
-                             class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-brick-light lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                             class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-300 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
                           <defs>
                             <pattern id="27df4f81-c854-45de-942a-fe90f7a300f9" x="0" y="0" width=".135" height=".30">
                               <circle cx="1" cy="1" r=".7"></circle>
@@ -83,8 +83,8 @@
                 <div class="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
                     <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row text-center sm:text-left">
                         <div class="sm:mr-4">
-                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-brick-light mx-auto sm:mx-none">
-                                <svg class="w-8 h-8 text-brick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-300 mx-auto sm:mx-none">
+                                <svg class="w-8 h-8 text-blue-intami" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
                                 </svg>
                             </div>
@@ -98,8 +98,8 @@
                     </div>
                     <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row text-center sm:text-left">
                         <div class="sm:mr-4">
-                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-brick-light mx-auto sm:mx-none">
-                                <svg class="w-8 h-8 text-brick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-300 mx-auto sm:mx-none">
+                                <svg class="w-8 h-8 text-blue-intami" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                                 </svg>
                             </div>
@@ -113,8 +113,8 @@
                     </div>
                     <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row text-center sm:text-left">
                         <div class="sm:mr-4">
-                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-brick-light mx-auto sm:mx-none">
-                                <svg class="w-8 h-8 text-brick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-300 mx-auto sm:mx-none">
+                                <svg class="w-8 h-8 text-blue-intami" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" />
                                 </svg>
                             </div>
@@ -128,8 +128,8 @@
                     </div>
                     <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row text-center sm:text-left">
                         <div class="sm:mr-4">
-                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-brick-light mx-auto sm:mx-none">
-                                <svg class="w-8 h-8 text-brick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-300 mx-auto sm:mx-none">
+                                <svg class="w-8 h-8 text-blue-intami" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                                 </svg>
                             </div>
@@ -148,15 +148,15 @@
                 <div class="grid gap-10 lg:grid-cols-2">
                     <div class="lg:pr-10">
                         <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brick-light">
-                                <svg class="w-8 h-8 text-brick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-300">
+                                <svg class="w-8 h-8 text-blue-intami" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
                                 </svg>
                             </div>
                         </a>
                         <h5 class="mb-4 text-4xl font-extrabold leading-none">
                             Who we
-                            <span class="inline-block text-brick">are</span>
+                            <span class="inline-block text-blue-intami">are</span>
                         </h5>
                         <p class="mb-6 text-gray-900">
                             Intami is an initiative launched by 8 young lebanese women. It is a network that brings
@@ -169,14 +169,14 @@
                         </p>
                         <hr class="mb-5 border-gray-300" />
                         <div class="flex items-center space-x-4">
-{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-brick">--}}
+{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-blue-intami">--}}
 {{--                                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">--}}
 {{--                                    <path--}}
 {{--                                        d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"--}}
 {{--                                    ></path>--}}
 {{--                                </svg>--}}
 {{--                            </a>--}}
-                            <a href="https://www.instagram.com/intaminetwork/" class="text-gray-600 transition-colors duration-300 hover:text-brick">
+                            <a href="https://www.instagram.com/intaminetwork/" class="text-gray-600 transition-colors duration-300 hover:text-blue-intami">
                                 <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
                                     <circle cx="15" cy="15" r="4"></circle>
                                     <path
@@ -184,14 +184,14 @@
                                     ></path>
                                 </svg>
                             </a>
-{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-brick">--}}
+{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-blue-intami">--}}
 {{--                                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">--}}
 {{--                                    <path--}}
 {{--                                        d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"--}}
 {{--                                    ></path>--}}
 {{--                                </svg>--}}
 {{--                            </a>--}}
-{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-brick">--}}
+{{--                            <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-blue-intami">--}}
 {{--                                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6">--}}
 {{--                                    <path--}}
 {{--                                        d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z"--}}
@@ -206,16 +206,16 @@
                 </div>
             </div>
 
-            <section id="definition" class="w-full bg-brick">
+            <section id="definition" class="w-full bg-blue-intami">
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8 lg:py-20">
                     <div class="bg-white rounded p-10 md:p-16 mx-auto shadow-lg" >
                         <div class="card-body">
                             <h2 class="mb-6 flex font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center sm:text-left">
                                 <intami-sound class="mr-4"></intami-sound>
-                                Intami <small class="ml-2"> - <span class="text-brick">verb</span></small>
+                                Intami <small class="ml-2"> - <span class="text-blue-500">verb</span></small>
                             </h2>
                             <p class="">
-                                Translates to <span class="text-brick">“belong”</span> in Arabic. It means to be a part of a group or an
+                                Translates to <span class="text-blue-intami">“belong”</span> in Arabic. It means to be a part of a group or an
                                 organisation
                             </p>
                             <h3 class="mt-5 font-semibold">Why Intami ?</h3>

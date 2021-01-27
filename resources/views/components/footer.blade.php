@@ -11,10 +11,10 @@
             </div>
         </div>
         <div class="space-y-2 text-sm">
-            <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+            <p class="text-base font-bold tracking-wide text-gray-900">Contact</p>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Email:</p>
-                <a href="mailto:contact@intaminetwork.com" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-brick hover:text-brick-light">contact@intaminetwork.com</a>
+                <a href="mailto:contact@intaminetwork.com" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-blue-intamihover:text-blue-500">contact@intaminetwork.com</a>
             </div>
         </div>
         <div>

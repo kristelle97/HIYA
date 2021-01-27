@@ -89943,7 +89943,7 @@ var render = function() {
         _c(
           "svg",
           {
-            staticClass: "text-brick w-10 h-10",
+            staticClass: "text-blue-intami w-10 h-10",
             attrs: {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 20 20",

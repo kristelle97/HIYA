@@ -61,21 +61,21 @@
 <nav class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="relative flex items-center justify-between">
         <a href="{{ url('/') }}" aria-label="Company" title="Company" class="inline-flex items-center">
-            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase hover:text-brick">Intami</span>
+            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase hover:text-blue-intami">Intami</span>
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
-            <li><a href="{{ route('blog.index') }}" aria-label="Our blog" title="Our blog" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Blog</a></li>
-            <li><a href="{{ route('jobs.index') }}" aria-label="Jobs from our community" title="Jobs from our community" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Jobs</a></li>
-            <li><a href="{{ route('women.index') }}" aria-label="Women of Intami" title="Women of Intami" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Women of Intami</a></li>
+            <li><a href="{{ route('blog.index') }}" aria-label="Our blog" title="Our blog" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Blog</a></li>
+            <li><a href="{{ route('jobs.index') }}" aria-label="Jobs from our community" title="Jobs from our community" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Jobs</a></li>
+            <li><a href="{{ route('women.index') }}" aria-label="Women of Intami" title="Women of Intami" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Women of Intami</a></li>
             @auth
-            <li><a href="{{ route('members.index') }}" aria-label="Members" title="Members" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Members</a></li>
+            <li><a href="{{ route('members.index') }}" aria-label="Members" title="Members" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Members</a></li>
             @endauth
         </ul>
         <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
                 <a
                     href="/"
-                    class="inline-flex items-center justify-center h-12 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-brick hover:bg-brick-light focus:shadow-outline focus:outline-none"
+                    class="inline-flex items-center justify-center h-12 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-500 focus:shadow-outline focus:outline-none"
                     aria-label="Sign up"
                     title="Sign up"
                 >
@@ -120,10 +120,10 @@
                 </div>
                 <nav>
                   <ul class="space-y-4">
-                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Product</a></li>
-                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Features</a></li>
-                    <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">Pricing</a></li>
-                    <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-brick">About us</a></li>
+                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Product</a></li>
+                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Features</a></li>
+                    <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Pricing</a></li>
+                    <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">About us</a></li>
                     <li>
                       <a
                         href="/"
