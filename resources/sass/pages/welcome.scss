@@ -1,33 +1,33 @@
-#welcome {
-
-    #hero {
-        min-height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        background: linear-gradient(
-                rgba(255, 255, 255, 0.65),
-                rgba(255, 255, 255, 0.65)
-        ), url('../img/welcome/bg.jpg');
-        background-size: cover;
-        background-position: center center;
-
-        .logo {
-            max-width: 220px;
-            width: 50%;
-        }
-    }
-
-    #how-does-it-work {
-        background-color: white;
-    }
-
-    #definition {
-        background-color: $purple;
-    }
-
-
-
-}
+//#welcome {
+//
+//    #hero {
+//        min-height: 70vh;
+//        display: flex;
+//        flex-direction: column;
+//        justify-content: center;
+//
+//        background: linear-gradient(
+//                rgba(255, 255, 255, 0.65),
+//                rgba(255, 255, 255, 0.65)
+//        ), url('../img/welcome/bg.jpg');
+//        background-size: cover;
+//        background-position: center center;
+//
+//        .logo {
+//            max-width: 220px;
+//            width: 50%;
+//        }
+//    }
+//
+//    #how-does-it-work {
+//        background-color: white;
+//    }
+//
+//    #definition {
+//        background-color: $purple;
+//    }
+//
+//
+//
+//}
 

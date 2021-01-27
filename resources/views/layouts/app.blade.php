@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Intami') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,7 +27,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://kit.fontawesome.com/a05cbf66d2.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script type="application/javascript">
 
@@ -38,10 +37,6 @@
 
 </script>
 
-@if(Request::is( Config::get('chatter.routes.home') ) || Request::is( Config::get('chatter.routes.home') . '/*' ))
-    {{--Load jQuery only for the forum--}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-@endif
 @yield('js')
 </body>
 </html>

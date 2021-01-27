@@ -1,37 +1,37 @@
-
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/**
- * Elements.io overrides
- */
-
-body .el-input__inner {
-  @extend .form-control;
-}
-.el-select, .el-date-editor {
-  width: 100% !important;
-  background-color: white !important;
-
-  .el-input__inner[readonly]{
-    background-color: white !important;
-  }
-}
-
-.el-alert__description {
-  font-size: 0.9rem;
-}
-
-/**
- * Transitions
- */
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+//
+//.box {
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+///**
+// * Elements.io overrides
+// */
+//
+//body .el-input__inner {
+//  @extend .form-control;
+//}
+//.el-select, .el-date-editor {
+//  width: 100% !important;
+//  background-color: white !important;
+//
+//  .el-input__inner[readonly]{
+//    background-color: white !important;
+//  }
+//}
+//
+//.el-alert__description {
+//  font-size: 0.9rem;
+//}
+//
+///**
+// * Transitions
+// */
+//
+//.fade-enter-active, .fade-leave-active {
+//  transition: opacity .5s;
+//}
+//.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//  opacity: 0;
+//}
