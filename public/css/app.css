@@ -31872,6 +31872,82 @@ video {
           animation: bounce 1s infinite;
 }
 
+/**
+ * Elements.io overrides
+ */
+
+body .el-input__inner {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity)) !important;
+}
+
+body .el-input__inner:focus{
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(9, 0, 67, var(--tw-border-opacity)) !important;
+}
+
+body .el-input__inner{
+  border-radius: 0.25rem !important;
+  border-width: 1px !important;
+  flex-grow: 1 !important;
+  height: 3rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+body .el-input__inner:focus{
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+body .el-input__inner{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  width: 100% !important;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+  transition-duration: 200ms !important;
+}
+
+@media (min-width: 768px){
+  body .el-input__inner{
+    margin-bottom: 0px !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+.el-select, .el-date-editor {
+  width: 100% !important;
+  background-color: white !important;
+}
+
+.el-select .el-input__inner[readonly], .el-date-editor .el-input__inner[readonly] {
+  background-color: white !important;
+}
+
+.el-alert__description {
+  font-size: 0.9rem;
+}
+
+/**
+ * Transitions
+ */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

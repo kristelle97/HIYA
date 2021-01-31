@@ -5,7 +5,7 @@
     @include('components.flash')
     @include('components.errors')
 
-    <div id="main-page-content">
+    <div id="main-page-content" class="flex-grow">
     @yield('content')
     </div>
 

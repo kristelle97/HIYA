@@ -7,7 +7,7 @@
         </label>
         <div :class="{'col-md-6':label,'col':!label}">
             <textarea :type="type"
-                   :class="{'form-control':true,'invalid':!valid}"
+                   :class="{'flex-grow w-full h-12 pt-2 h-20 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none':true,'invalid':!valid}"
                    :id="name"
                    :name="name"
                    :placeholder="placeholder"

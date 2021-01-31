@@ -21,7 +21,7 @@
 </head>
 <body>
 <div id="app">
-    <main id="main-container">
+    <main id="main-container" class="min-h-screen flex flex-col">
         @yield('page')
     </main>
 </div>

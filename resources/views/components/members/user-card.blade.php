@@ -1,43 +1,37 @@
-<div class="user-card card">
-    <img class="mx-auto d-block mb-3 user-image shadow" src="{{$user->picture_url}}"/>
-
-    <div class="card-body d-flex flex-column">
-
-        <div class="information flex-grow-1">
-            <h5 class="text-center">{{$user->full_name}}</h5>
+<div class="pt-20 h-full">
+    <div class="bg-white p-5 rounded shadow-lg w-full pt-20 relative h-full flex flex-col">
+        <img class="mx-auto w-32 rounded-full shadow absolute mx-auto inset-x-0	-top-16" src="{{$user->picture_url}}"/>
+        <div class="information flex-grow">
+            <h5 class="text-center font-semibold text-xl">{{$user->full_name}}</h5>
             @if($user->country_of_residence)
-                <p class="text-center mb-0">{{$user->country_of_residence}}</p>
+                <p class="text-center mb-0 text-gray-600">{{$user->country_of_residence}}</p>
             @else
-                <p class="text-center mb-0">Location unknown</p>
+                <p class="text-center mb-0 text-gray-600">Location unknown</p>
             @endif
 
             @if($user->work_area && $user->job_position)
-                <p class="text-center">"{{$user->job_position}}" in {{$user->work_area}} industry</p>
+                <p class="text-center text-gray-600">"{{$user->job_position}}" in {{$user->work_area}} industry</p>
             @elseif($user->work_area)
-                <p class="text-center">Working in {{$user->work_area}} industry</p>
+                <p class="text-center text-gray-600">Working in {{$user->work_area}} industry</p>
             @elseif($user->job_position)
-                <p class="text-center">"{{$user->job_position}}"</p>
+                <p class="text-center text-gray-600">"{{$user->job_position}}"</p>
             @else
-                <p class="text-center">Job Position & Industry unknown</p>
-            @endif
-
-            @if($user->description)
-                <p>"{{$user->description}}"</p>
+                <p class="text-center text-gray-600">Job Position & Industry unknown</p>
             @endif
         </div>
 
-        <div class="actions text-center">
-            <vue-form class="d-inline" form-class="d-inline" method="POST"
+        <div class="flex flex-col text-center mt-5">
+            <vue-form class="flex-grow" form-class="d-inline" method="POST"
                       action="{{route('members.clap',['slug'=>$user->slug])}}">
-                <button type="submit" class="btn btn-outline-secondary">
+                <button type="submit" class="w-full transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white">
                     @if($user->liked())
-                        👏 Un-Applaude
+                        <span class="mr-3">👏</span> Un-Applaude
                     @else
-                        👏 Applaude
+                        <span class="mr-3">👏</span> Applaude
                     @endif
                 </button>
             </vue-form>
-            <a href="{{route('members.show',['slug'=>$user->slug])}}" class="btn btn-outline-secondary">✉️ Contact</a>
+            <a href="{{route('members.show',['slug'=>$user->slug])}}" class="transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white flex-grow mt-3"><span class="mr-3">✉️</span> Contact</a>
         </div>
     </div>
 </div>

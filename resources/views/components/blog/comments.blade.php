@@ -1,33 +1,36 @@
-<div class="comments">
+<div class="flex flex-col">
     @if(count($post->comments))
         <div class="published-comments mb-4">
-            <div class="card">
-                <ul class="list-group list-group-flush">
-                    @foreach($post->comments as $comment)
+            <ul class="list-group list-group-flush">
+                @foreach($post->comments as $comment)
 
-                        <li class="list-group-item">
-                            <p class="mb-0">
-                                <img src="{{$comment->author->picture_url}}" class="author-picture"/>
-                                <b>{{$comment->author->full_name}}</b> -
-                                <span class="text-secondary">{{$comment->created_at->diffForHumans()}}</span></p>
-                            <p class="mb-0">
-                                {{$comment->content}}
-                            </p>
-                            <div class="d-flex mt-4">
-                                @include('components.blog.comment-likes')
-
-                                @if($comment->author->id == \Auth::id() || \Auth::user()->admin)
-                                    <vue-form class="text-right" method="delete" action="{{route('post.comment.delete',[
+                    <li class="w-full flex flex-col py-5 border-b-2 border-gray-300">
+                        <a class="flex items-center" href="{{route('members.show',[$comment->author->slug])}}">
+                            <img src="{{$comment->author->picture_url}}" class="w-12 h-12 rounded-full"/>
+                            <div class="flex flex-col ml-3">
+                                <p>{{$comment->author->full_name}}</p>
+                                <p class="text-secondary text-xs flex">{{$comment->created_at->diffForHumans()}}
+                                    @if($comment->author->id == \Auth::id() || \Auth::user()->admin) -
+                                        <vue-form class="text-right ml-2" method="delete" action="{{route('post.comment.delete',[
                                     'id' => $comment->id
                                 ])}}">
-                                        <button type="submit" class="btn btn-link">Delete</button>
-                                    </vue-form>
-                                @endif
+                                            <button type="submit"
+                                                    class="text-red-500 hover:underline">
+                                                Delete
+                                            </button>
+                                        </vue-form>
+                                    @endif</p>
                             </div>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+                        </a>
+                        <p class="mt-4">
+                            {{$comment->content}}
+                        </p>
+                        <div class="flex flex-row-reverse mt-4">
+                            @include('components.blog.comment-likes')
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
         </div>
     @endif
 
@@ -39,7 +42,10 @@
             placeholder="Your Comment"
         ></input-textarea>
         <p class="text-right">
-            <button class="btn btn-outline-primary">Publish Comment</button>
+            <button
+                class="transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-8 py-2 hover:text-white">
+                Publish Comment
+            </button>
         </p>
     </vue-form>
 </div>

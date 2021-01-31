@@ -4532,8 +4532,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {},
   computed: {},
@@ -89367,19 +89365,13 @@ var render = function() {
           var valid = ref.valid
           return [
             _vm.label
-              ? _c(
-                  "label",
-                  {
-                    staticClass: "col-md-4 col-form-label text-md-right",
-                    attrs: { for: _vm.name }
-                  },
-                  [_vm._v("\n            " + _vm._s(_vm.label) + "\n        ")]
-                )
+              ? _c("label", { attrs: { for: _vm.name } }, [
+                  _vm._v("\n            " + _vm._s(_vm.label) + "\n        ")
+                ])
               : _vm._e(),
             _vm._v(" "),
             _c(
               "div",
-              { class: { "col-md-6": _vm.label, "col-md-12": !_vm.label } },
               [
                 _vm.type === "checkbox"
                   ? _c("input", {
@@ -89391,7 +89383,10 @@ var render = function() {
                           expression: "value"
                         }
                       ],
-                      class: { "form-control": true, invalid: !valid },
+                      class: {
+                        "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        invalid: !valid
+                      },
                       attrs: {
                         id: _vm.name,
                         name: _vm.name,
@@ -89446,7 +89441,10 @@ var render = function() {
                           expression: "value"
                         }
                       ],
-                      class: { "form-control": true, invalid: !valid },
+                      class: {
+                        "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        invalid: !valid
+                      },
                       attrs: {
                         id: _vm.name,
                         name: _vm.name,
@@ -89480,7 +89478,10 @@ var render = function() {
                           expression: "value"
                         }
                       ],
-                      class: { "form-control": true, invalid: !valid },
+                      class: {
+                        "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        invalid: !valid
+                      },
                       attrs: {
                         id: _vm.name,
                         name: _vm.name,
@@ -89514,7 +89515,7 @@ var render = function() {
                     ? _c(
                         "small",
                         {
-                          staticClass: "form-text text-danger",
+                          staticClass: "form-text text-red-500",
                           attrs: { id: _vm.name + "Error" }
                         },
                         _vm._l(errors, function(error) {
@@ -89589,7 +89590,10 @@ var render = function() {
                       expression: "value"
                     }
                   ],
-                  class: { "form-control": true, invalid: !valid },
+                  class: {
+                    "flex-grow w-full h-12 pt-2 h-20 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                    invalid: !valid
+                  },
                   attrs: {
                     type: _vm.type,
                     id: _vm.name,
@@ -89931,6 +89935,7 @@ var render = function() {
     _c(
       "a",
       {
+        staticClass: "text-3xl",
         attrs: { href: "#" },
         on: {
           click: function($event) {
@@ -89939,29 +89944,7 @@ var render = function() {
           }
         }
       },
-      [
-        _c(
-          "svg",
-          {
-            staticClass: "text-blue-intami w-10 h-10",
-            attrs: {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 20 20",
-              fill: "currentColor"
-            }
-          },
-          [
-            _c("path", {
-              attrs: {
-                "fill-rule": "evenodd",
-                d:
-                  "M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z",
-                "clip-rule": "evenodd"
-              }
-            })
-          ]
-        )
-      ]
+      [_vm._v("\n        🔊\n    ")]
     ),
     _vm._v(" "),
     _c("audio", { attrs: { id: "audio-intami", src: "/sound/intami.mp3" } })

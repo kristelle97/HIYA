@@ -4,34 +4,34 @@
 //  align-items: center;
 //  justify-content: center;
 //}
-//
-///**
-// * Elements.io overrides
-// */
-//
-//body .el-input__inner {
-//  @extend .form-control;
-//}
-//.el-select, .el-date-editor {
-//  width: 100% !important;
-//  background-color: white !important;
-//
-//  .el-input__inner[readonly]{
-//    background-color: white !important;
-//  }
-//}
-//
-//.el-alert__description {
-//  font-size: 0.9rem;
-//}
-//
-///**
-// * Transitions
-// */
-//
-//.fade-enter-active, .fade-leave-active {
-//  transition: opacity .5s;
-//}
-//.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-//  opacity: 0;
-//}
+
+/**
+ * Elements.io overrides
+ */
+
+body .el-input__inner {
+  @apply flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none #{!important};
+}
+.el-select, .el-date-editor {
+  width: 100% !important;
+  background-color: white !important;
+
+  .el-input__inner[readonly]{
+    background-color: white !important;
+  }
+}
+
+.el-alert__description {
+  font-size: 0.9rem;
+}
+
+/**
+ * Transitions
+ */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

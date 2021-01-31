@@ -1,4 +1,4 @@
-<footer class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8">
+<footer class="px-4 pt-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8">
     <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div class="sm:col-span-2">
             <a href="{{ url('/')  }}" aria-label="Go home" title="Company" class="inline-flex items-center">
@@ -27,7 +27,7 @@
 {{--                        ></path>--}}
 {{--                    </svg>--}}
 {{--                </a>--}}
-                <a href="https://www.instagram.com/intaminetwork/" target="_blank" class="text-gray-500 transition-colors duration-300 hover:text-brick">
+                <a href="https://www.instagram.com/intaminetwork/" target="_blank" class="text-gray-500 transition-colors duration-300 hover:text-blue-intami">
                     <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
                         <circle cx="15" cy="15" r="4"></circle>
                         <path
