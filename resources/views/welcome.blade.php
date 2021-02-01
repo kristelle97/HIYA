@@ -49,7 +49,7 @@
                                         <a
                                             href="{{route('members.index')}}"
                                             type="submit"
-                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-300 focus:shadow-outline focus:outline-none"
+                                            class="bg-blue-intami block duration-200 focus:shadow-outline font-medium h-12 hover:bg-blue-300 items-center justify-center px-6 py-3 rounded shadow-md text-center text-white transition w-full"
                                         >
                                             Our Members
                                         </a>
@@ -202,8 +202,8 @@
                             {{--                            </a>--}}
                         </div>
                     </div>
-                    <div>
-                        <iframe class="object-cover w-full h-56 rounded shadow-lg sm:h-96" height="315"
+                    <div class="relative" style="padding-top: 56.25%">
+                        <iframe class="absolute inset-0 w-full h-full" height="315"
                                 src="https://www.youtube.com/embed/n-9sUpGFCyw" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>

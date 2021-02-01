@@ -7,7 +7,8 @@
             </label>
             <div>
                 <input :type="type"
-                       :class="{'flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none':true,'invalid':!valid}"
+                       :class="{'flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none':true
+                       ,'pt-2':type=='file','invalid':!valid}"
                        :id="name"
                        :name="name"
                        :placeholder="placeholder"

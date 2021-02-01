@@ -31,5 +31,43 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="instamidb@prod" uuid="f47b4e70-a2d0-4f25-908f-3477b45524e1">
+      <database-info product="PostgreSQL" version="12.3 (Ubuntu 12.3-1.pgdg20.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="12.3" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>forge</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <ssh-config-id>2a504390-4e6a-4c97-92bc-900c38d375a9</ssh-config-id>
+      </ssh-properties>
+    </data-source>
+    <data-source name="intamiblog@prod" uuid="89d9b7df-1f2f-4fca-8b9e-0aa04de8fc2e">
+      <database-info product="PostgreSQL" version="12.3 (Ubuntu 12.3-1.pgdg20.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="12.3" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>forge</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <ssh-config-id>2a504390-4e6a-4c97-92bc-900c38d375a9</ssh-config-id>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>

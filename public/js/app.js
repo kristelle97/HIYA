@@ -4175,6 +4175,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   "extends": _common_input_default_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -89385,6 +89386,7 @@ var render = function() {
                       ],
                       class: {
                         "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        "pt-2": _vm.type == "file",
                         invalid: !valid
                       },
                       attrs: {
@@ -89443,6 +89445,7 @@ var render = function() {
                       ],
                       class: {
                         "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        "pt-2": _vm.type == "file",
                         invalid: !valid
                       },
                       attrs: {
@@ -89480,6 +89483,7 @@ var render = function() {
                       ],
                       class: {
                         "flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-intami focus:outline-none": true,
+                        "pt-2": _vm.type == "file",
                         invalid: !valid
                       },
                       attrs: {

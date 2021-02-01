@@ -52,7 +52,9 @@
             <div class="flex flex-wrap">
                 @foreach($users as $user)
                     <div class="w-full sm:w-1/2 lg:w-1/3 mb-5 px-2">
+                        <a href="{{route('members.show',['slug'=>$user->slug])}}">
                         @include('components.members.user-card')
+                        </a>
                     </div>
                 @endforeach
             </div>

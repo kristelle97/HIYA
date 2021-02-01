@@ -8,7 +8,7 @@
 
                 <img class="mx-auto rounded-full block mb-3 w-32" src="{{Auth::user()->picture_url}}"/>
 
-                <p>These information will be shared with the other Hiya members. Note that we will never share
+                <p>These information will be shared with the other Intami members. Note that we will never share
                     your contact details directly.</p>
 
                 <vue-form method="POST" action="{{route('profile.update')}}">

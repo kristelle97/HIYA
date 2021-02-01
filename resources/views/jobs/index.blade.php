@@ -10,6 +10,14 @@
             </h1>
 
 
+            <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+            <div class="w-full bg-white rounded shadow-sm p-5">
+                <h3 class="font-semibold mb-3">Do you want to publish a job listing on Intami?</h3>
+                <p>Send us the job listing you want to share with the members of the network to <a class="text-blue-intami hover:underline" href="mailto:intaminetwork">contact@intaminetwork.com</a></p>
+            </div>
+            </div>
+
+
             @if (count($posts)==0)
                 <p class="text-center">
                     Nothing here yet !
