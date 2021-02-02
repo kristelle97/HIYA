@@ -49,7 +49,7 @@
                                         <a
                                             href="{{route('members.index')}}"
                                             type="submit"
-                                            class="bg-blue-intami block duration-200 focus:shadow-outline font-medium h-12 hover:bg-blue-300 items-center justify-center px-6 py-3 rounded shadow-md text-center text-white transition w-full"
+                                            class="bg-blue-intami appearance-none block duration-200 focus:shadow-outline font-medium h-12 hover:bg-blue-300 items-center justify-center px-6 py-3 rounded shadow-md text-center text-white transition w-full"
                                         >
                                             Our Members
                                         </a>
