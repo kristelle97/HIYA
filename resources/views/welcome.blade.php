@@ -39,7 +39,7 @@
                                             <a
                                                 href="{{route('register')}}"
                                                 type="submit"
-                                                class="w-full py-3 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                                class="w-full appearance-none py-3 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-500 focus:shadow-outline focus:outline-none"
                                             >Sign up</a>
                                         </p>
                                     </div>
