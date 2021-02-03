@@ -24,9 +24,11 @@ class ProfileController extends Controller
 
         if ($request->photo) {
             $fileName = 'uploads/avatars/' . \Auth::id() . '.' . $request->photo->getClientOriginalExtension();
-            Image::make($request->photo)
+            $imgData = Image::make($request->photo)
                  ->resize(300,300)
-                 ->save( $fileName );
+                 ->encode();
+
+            \Storage::put($fileName, $imgData);
 
             \Auth::user()->update([
                 'picture_url' => $fileName
