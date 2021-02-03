@@ -28,7 +28,7 @@ class ProfileController extends Controller
                  ->resize(300,300)
                  ->encode();
 
-            \Storage::put($fileName, $imgData);
+            \Storage::put($fileName, 'public/'.$imgData);
 
             \Auth::user()->update([
                 'picture_url' => $fileName

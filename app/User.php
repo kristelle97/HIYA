@@ -61,7 +61,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
         if ($url == null || $url == '') {
             return '/img/avatar-placeholder.jpg';
         }
-        return '/' . $url;
+        return asset($url);
     }
 
     /**
