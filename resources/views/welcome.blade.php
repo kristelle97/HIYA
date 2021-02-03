@@ -35,11 +35,11 @@
                                         Become a member now
                                     </h3>
                                     <div class="mt-4">
-                                        <p class="text-center">
+                                        <p class="text-center block w-full">
                                             <a
                                                 href="{{route('register')}}"
                                                 type="submit"
-                                                class="w-full appearance-none py-3 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                                class="w-full block appearance-none py-3 px-6 font-medium text-white transition duration-200 rounded shadow-md bg-blue-intami hover:bg-blue-500 focus:shadow-outline focus:outline-none"
                                             >Sign up</a>
                                         </p>
                                     </div>
@@ -49,7 +49,7 @@
                                         <a
                                             href="{{route('members.index')}}"
                                             type="submit"
-                                            class="bg-blue-intami appearance-none block duration-200 focus:shadow-outline font-medium h-12 hover:bg-blue-300 items-center justify-center px-6 py-3 rounded shadow-md text-center text-white transition w-full"
+                                            class="w-full bg-blue-intami block appearance-none block duration-200 focus:shadow-outline font-medium h-12 hover:bg-blue-300 items-center justify-center px-6 py-3 rounded shadow-md text-center text-white transition w-full"
                                         >
                                             Our Members
                                         </a>

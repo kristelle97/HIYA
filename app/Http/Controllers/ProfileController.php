@@ -23,13 +23,13 @@ class ProfileController extends Controller
         \Auth::user()->update($request->all());
 
         if ($request->photo) {
-            $fileName = public_path('/uploads/avatars/') . \Auth::id() . '.' . $request->photo->getClientOriginalExtension();
+            $fileName = 'uploads/avatars/' . \Auth::id() . '.' . $request->photo->getClientOriginalExtension();
             Image::make($request->photo)
                  ->resize(300,300)
                  ->save( $fileName );
 
             \Auth::user()->update([
-                'picture_url' =>'/uploads/avatars/' . \Auth::id() . '.' . $request->photo->getClientOriginalExtension()
+                'picture_url' => $fileName
             ]);
         }
 

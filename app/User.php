@@ -55,13 +55,13 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
      * Mutators
      */
 
-    public function getPictureUrlAttribute(  )
+    public function getPictureUrlAttribute()
     {
         $url = $this->attributes['picture_url'];
-        if ($url == null || $url =='') {
+        if ($url == null || $url == '') {
             return '/img/avatar-placeholder.jpg';
         }
-        return $url;
+        return '/' . $url;
     }
 
     /**
@@ -73,22 +73,23 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
         return 'slug';
     }
 
-    public function getSlugOptions() : SlugOptions
+    public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
-                          ->generateSlugsFrom(['first_name', 'last_name'])
-                          ->saveSlugsTo('slug');
+            ->generateSlugsFrom(['first_name', 'last_name'])
+            ->saveSlugsTo('slug');
     }
 
-    public function getFullNameAttribute(  )
+    public function getFullNameAttribute()
     {
-        return $this->first_name .' '. $this->last_name;
+        return $this->first_name . ' ' . $this->last_name;
     }
 
     /**
      * Relationships
      */
-    public function comments() {
+    public function comments()
+    {
         return $this->hasMany(PostComment::class);
     }
 }
