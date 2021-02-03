@@ -33,7 +33,7 @@ class ProfileController extends Controller
             \Storage::put('public/' . $fileName, $imgData);
 
             \Auth::user()->update([
-                'picture_url' => $fileName
+                'picture_url' => 'storage/'.$fileName
             ]);
         }
 
