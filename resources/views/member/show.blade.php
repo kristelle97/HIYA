@@ -43,12 +43,17 @@
                         @endif
                     </div>
 
-                    <vue-form class="flex-grow mx-auto" form-class="d-inline mt-5" method="POST"
+                    <vue-form class="flex-grow" form-class="d-inline" method="POST"
                               action="{{route('members.clap',['slug'=>$user->slug])}}">
-                        <button type="submit"
-                                class="w-full transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white">
+                        <button type="submit" class="w-full transition
+                    @if($user->liked())
+                            hover:bg-white hover:text-blue-intami border-2 border-blue-intami text-white bg-blue-intami
+@else
+                            hover:bg-blue-intami hover:text-white border-2 border-gray-300 text-blue-intami
+@endif
+                            rounded px-4 py-2">
                             @if($user->liked())
-                                <span class="mr-3">👏</span> Un-Applaude
+                                <span class="mr-3">👏</span> Applauded
                             @else
                                 <span class="mr-3">👏</span> Applaude
                             @endif
