@@ -46,7 +46,7 @@
                         @endif
 
                         @if($user->description)
-                            <p>"{{$user->description}}"</p>
+                            <p class="text-center italic mt-3">"{{$user->description}}"</p>
                         @endif
                     </div>
 
