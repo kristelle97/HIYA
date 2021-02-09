@@ -68,12 +68,16 @@
                     </vue-form>
 
                     @if($user->likeCount)
+                        @if($user->likeCount<3)
                         <p class="mt-5 pt-5 border-t">
                         {{$user->full_name}} was applauded by:
                             @foreach($user->applaudedBy() as $liker)
                                 <a class="hover:underline" href="{{route('members.show',['slug'=>$liker->slug])}}">{{$liker->full_name}}</a> @if (!$loop->last),@endif
                             @endforeach
                         </p>
+                        @else
+                            {{$user->full_name}} was applauded by {{$user->applaudedBy()->first()->full_name}}, {{$user->applaudedBy()->skip(1)->first()->full_name}} and {{$user->likeCount-2}} more.
+                        @endif
                     @endif
                 </div>
             </div>
