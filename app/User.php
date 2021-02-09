@@ -3,11 +3,13 @@
 namespace App;
 
 use App\Models\PostComment;
+use Conner\Likeable\Like;
 use Conner\Likeable\Likeable;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use phpDocumentor\Reflection\Types\Self_;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -91,5 +93,17 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
     public function comments()
     {
         return $this->hasMany(PostComment::class);
+    }
+
+    public function applaudedBy()
+    {
+        if ($this->likeCount == 0) {
+            return collect();
+        }
+
+        $likersIds = Like::where('likeable_id',$this->id)
+            ->where('likeable_type',self::class)
+            ->get('user_id')->pluck('user_id');
+        return User::find($likersIds);
     }
 }

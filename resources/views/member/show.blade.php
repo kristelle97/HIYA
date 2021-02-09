@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full bg-gray-100 py-10">
-        <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8">
+        <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-3xl md:px-24 lg:px-8">
 
             <div class="mb-3">
                 <a class="flex items-center hover:underline" href="{{route('members.index')}}">
@@ -19,6 +19,13 @@
                 <div class="bg-white p-5 rounded shadow-lg w-full pt-20 relative h-full flex flex-col">
                     <img class="mx-auto w-32 rounded-full shadow absolute mx-auto inset-x-0	-top-16"
                          src="{{$user->picture_url}}"/>
+                    @if($user->likeCount)
+                        <div class="like-container absolute top-6 flex justify-center inset-x-0">
+                            <div class="p-3 text-xs rounded-full font-semibold bg-white shadow ml-24">
+                                {{$user->likeCount}} 👏
+                            </div>
+                        </div>
+                    @endif
                     <div class="information flex-grow">
                         <h5 class="text-center font-semibold text-xl">{{$user->full_name}}</h5>
                         @if($user->country_of_residence)
@@ -49,7 +56,7 @@
                     @if($user->liked())
                             hover:bg-white hover:text-blue-intami border-2 border-blue-intami text-white bg-blue-intami
 @else
-                            hover:bg-blue-intami hover:text-white border-2 border-gray-300 text-blue-intami
+                            hover:bg-blue-intami hover:text-white border border-gray-300 text-blue-intami
 @endif
                             rounded px-4 py-2">
                             @if($user->liked())
@@ -60,6 +67,14 @@
                         </button>
                     </vue-form>
 
+                    @if($user->likeCount)
+                        <p class="mt-5 pt-5 border-t">
+                        {{$user->full_name}} was applauded by:
+                            @foreach($user->applaudedBy() as $liker)
+                                <a class="hover:underline" href="{{route('members.show',['slug'=>$liker->slug])}}">{{$liker->full_name}}</a> @if (!$loop->last),@endif
+                            @endforeach
+                        </p>
+                    @endif
                 </div>
             </div>
 
@@ -72,7 +87,7 @@
                         placeholder="Your message"
                     ></input-textarea>
                     <p class="text-right">
-                        <button type="submit" class="transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white">Send Message</button>
+                        <button type="submit" class="transition border hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white">Send Message</button>
                     </p>
                 </vue-form>
             </div>

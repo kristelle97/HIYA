@@ -4,6 +4,13 @@
         <div class="bg-white p-5 rounded shadow-lg w-full pt-20 relative h-full flex flex-col">
             <img class="mx-auto w-32 rounded-full shadow absolute mx-auto inset-x-0	-top-16"
                  src="{{$user->picture_url}}"/>
+            @if($user->likeCount)
+                <div class="like-container absolute top-6 flex justify-center inset-x-0">
+                <div class="p-3 text-xs rounded-full font-semibold bg-white shadow ml-24">
+                   {{$user->likeCount}} 👏
+                </div>
+                </div>
+            @endif
             <div class="information flex-grow">
                 <h5 class="text-center font-semibold text-xl">{{$user->full_name}}</h5>
                 @if($user->country_of_residence)
@@ -28,9 +35,9 @@
                           action="{{route('members.clap',['slug'=>$user->slug])}}">
                     <button type="submit" class="w-full transition
                     @if($user->liked())
-                        hover:bg-white hover:text-blue-intami border-2 border-blue-intami text-white bg-blue-intami
+                        hover:bg-white hover:text-blue-intami border border-blue-intami text-white bg-blue-intami
                     @else
-                        hover:bg-blue-intami hover:text-white border-2 border-gray-300 text-blue-intami
+                        hover:bg-blue-intami hover:text-white border border-gray-300 text-blue-intami
                     @endif
                         rounded px-4 py-2">
                         @if($user->liked())
@@ -41,7 +48,7 @@
                     </button>
                 </vue-form>
                 <a href="{{route('members.show',['slug'=>$user->slug])}}"
-                   class="transition border-2 hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white flex-grow mt-3"><span
+                   class="transition border hover:border-blue-intami border-gray-300 hover:bg-blue-intami rounded px-4 py-2 hover:text-white flex-grow mt-3"><span
                         class="mr-3">✉️</span> Contact</a>
             </div>
         </div>
