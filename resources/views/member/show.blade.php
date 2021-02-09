@@ -43,9 +43,9 @@
                         @endif
                     </div>
 
-                    <vue-form class="flex-grow" form-class="d-inline" method="POST"
+                    <vue-form class="flex justify-center pt-5" method="POST"
                               action="{{route('members.clap',['slug'=>$user->slug])}}">
-                        <button type="submit" class="w-full transition
+                        <button type="submit" class="transition
                     @if($user->liked())
                             hover:bg-white hover:text-blue-intami border-2 border-blue-intami text-white bg-blue-intami
 @else
@@ -55,7 +55,7 @@
                             @if($user->liked())
                                 <span class="mr-3">👏</span> Applauded
                             @else
-                                <span class="mr-3">👏</span> Applaude
+                                <span class="mr-3">👏</span> Applaud
                             @endif
                         </button>
                     </vue-form>

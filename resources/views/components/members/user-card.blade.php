@@ -36,7 +36,7 @@
                         @if($user->liked())
                             <span class="mr-3">👏</span> Applauded
                         @else
-                            <span class="mr-3">👏</span> Applaude
+                            <span class="mr-3">👏</span> Applaud
                         @endif
                     </button>
                 </vue-form>
