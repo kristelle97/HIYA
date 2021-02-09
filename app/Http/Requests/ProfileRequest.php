@@ -25,10 +25,10 @@ class ProfileRequest extends FormRequest
     {
         return [
             'photo'                => 'mimes:jpeg,jpg,png|max:5120',
-            'job_position'         => 'string',
-            'work_area'            => 'string',
-            'country_of_residence' => 'string',
-            'description'          => 'string'
+            'job_position'         => 'present',
+            'work_area'            => 'present',
+            'country_of_residence' => 'present',
+            'description'          => 'present'
         ];
     }
 }
