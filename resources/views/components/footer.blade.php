@@ -51,13 +51,10 @@
         </p>
         <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
             <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-brick">F.A.Q</a>
+                <a href="/page/privacy-policy" class="text-sm text-gray-600 transition-colors duration-300 hover:text-brick">Privacy Policy</a>
             </li>
             <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-brick">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-brick">Terms &amp; Conditions</a>
+                <a href="/page/terms-and-conditions" class="text-sm text-gray-600 transition-colors duration-300 hover:text-brick">Terms &amp; Conditions</a>
             </li>
         </ul>
     </div>
