@@ -26,14 +26,26 @@ class ProfileController extends Controller
 
         if ($request->photo) {
             $fileName = 'uploads/avatars/' . \Auth::id() . '.' . $request->photo->getClientOriginalExtension();
-            $imgData = Image::make($request->photo)
-                ->resize(300, 300)
-                ->encode();
+            $imgData = Image::make($request->photo);
+
+            if ($imgData->width() > $imgData->height()) {
+                $imgData = $imgData->resize(null, 300, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                    ->crop(300, 300)
+                    ->encode();
+            } else {
+                $imgData = $imgData->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                    ->crop(300, 300)
+                    ->encode();
+            }
 
             \Storage::put('public/' . $fileName, $imgData);
 
             \Auth::user()->update([
-                'picture_url' => 'storage/'.$fileName
+                'picture_url' => 'storage/' . $fileName
             ]);
         }
 

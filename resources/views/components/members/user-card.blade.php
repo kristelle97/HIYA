@@ -4,8 +4,10 @@
             <span class="w-full h-full absolute inset-0 z-10"></span>
         </a>
 
-        <img class="mx-auto w-32 rounded-full shadow absolute mx-auto inset-x-0	-top-16"
-             src="{{$user->picture_url}}"/>
+        <div class="mx-auto w-32 rounded-full absolute mx-auto inset-x-0 -top-16">
+            <img class="object-cover rounded-full shadow"
+                 src="{{$user->picture_url}}"/>
+        </div>
         @if($user->likeCount)
             <div class="like-container absolute top-6 flex justify-center inset-x-0">
                 <div class="p-3 text-xs rounded-full font-semibold bg-white shadow ml-24">
