@@ -50,6 +50,6 @@ class ProfileController extends Controller
         }
 
         flash()->success('Profile updated.');
-        return redirect()->route('home');
+        return redirect()->route('profile.index');
     }
 }
