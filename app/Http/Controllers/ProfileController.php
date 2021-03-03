@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileRequest;
 use App\Rules\CountryRule;
 use App\Rules\WorkAreaRule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
 class ProfileController extends Controller
@@ -25,20 +26,18 @@ class ProfileController extends Controller
         \Auth::user()->update($request->all());
 
         if ($request->photo) {
-            $fileName = 'uploads/avatars/' . \Auth::id() . '.' . $request->photo->getClientOriginalExtension();
+            $fileName = 'uploads/avatars/' . \Auth::id() . '-' . Str::random(10) . '.' . $request->photo->getClientOriginalExtension();
             $imgData = Image::make($request->photo);
 
             if ($imgData->width() > $imgData->height()) {
                 $imgData = $imgData->resize(null, 300, function ($constraint) {
                     $constraint->aspectRatio();
-                })
-                    ->crop(300, 300)
+                })->crop(300, 300)
                     ->encode();
             } else {
                 $imgData = $imgData->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
-                    ->crop(300, 300)
+                })->crop(300, 300)
                     ->encode();
             }
 
