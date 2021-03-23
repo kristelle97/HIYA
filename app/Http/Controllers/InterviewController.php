@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 
-class WomenController extends Controller
+class InterviewController extends Controller
 {
-    const WOMEN_POST_TAG = 'members';
+    const WOMEN_POST_TAG = 'interview';
 
     public function index()
     {
@@ -18,7 +18,7 @@ class WomenController extends Controller
                          ->orderBy( 'publish_date', 'DESC' )
                          ->simplePaginate( 12 );
 
-        return view( 'women.index', [
+        return view( 'interview.index', [
             'posts' => $posts
         ] );
     }
@@ -35,6 +35,6 @@ class WomenController extends Controller
                         ->whereSlug( $slug )
                         ->firstOrFail();
 
-        return view( 'women.show', compact( 'post' ) );
+        return view( 'interview.show', compact( 'post' ) );
     }
 }

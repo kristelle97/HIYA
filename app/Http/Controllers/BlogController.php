@@ -12,7 +12,11 @@ class BlogController extends Controller
     {
         $posts = Post::with( 'tags' )
                      ->whereDoesntHave( 'tags', function ( $query ) {
-                         $query->whereIn( 'name', [ JobController::JOBS_POST_TAG, WomenController::WOMEN_POST_TAG ] );
+                         $query->whereIn( 'name', [
+                             JobController::JOBS_POST_TAG,
+                             InterviewController::WOMEN_POST_TAG,
+                             RecommendationController::RECOMMENDATION_POST_TAG
+                             ] );
                      } )
                      ->live()
                      ->orderBy( 'publish_date', 'DESC' )
@@ -29,7 +33,7 @@ class BlogController extends Controller
 
         $post = Post::with( ['tags','comments.author'] )
                     ->whereDoesntHave( 'tags', function ( $query ) {
-                        $query->whereIn( 'name', [ JobController::JOBS_POST_TAG, WomenController::WOMEN_POST_TAG ] );
+                        $query->whereIn( 'name', [ JobController::JOBS_POST_TAG, InterviewController::WOMEN_POST_TAG ] );
                     } )->live()
                     ->whereSlug( $slug )
                     ->firstOrFail();

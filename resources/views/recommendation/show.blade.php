@@ -6,7 +6,7 @@
         <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8">
 
             <div class="mb-3">
-                <a class="flex items-center hover:underline" href="{{route('women.index')}}">
+                <a class="flex items-center hover:underline" href="{{route('recommendation.index')}}">
                     <svg class="h-4 w-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -35,7 +35,7 @@
                         </div>
                         <p>
                             @foreach($post->tags as $tag)
-                                <span class="text-yellow-intami p-1 px-2 bg-yellow-100 rounded-full">{{$tag->name}}</span>
+                                <span class="text-yellow-intami p-1 px-2 bg-yellow-100 rounded-full">{{ucfirst($tag->name)}}</span>
                             @endforeach
                         </p>
                     </div>

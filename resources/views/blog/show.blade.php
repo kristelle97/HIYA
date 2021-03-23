@@ -35,7 +35,7 @@
                         </div>
                         <p>
                             @foreach($post->tags as $tag)
-                                <span class="text-yellow-intami p-1 px-2 bg-yellow-100 rounded-full">{{$tag->name}}</span>
+                                <span class="text-yellow-intami p-1 px-2 bg-yellow-100 rounded-full">{{ucfirst($tag->name)}}</span>
                             @endforeach
                         </p>
                     </div>

@@ -27,7 +27,7 @@
 
                         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
                             <img src="{{$post->featured_image}}" class="object-cover w-full h-64" alt="" />
-                            <div class="p-5 border border-t-0">
+                            <div class="p-5 border border-t-0 h-full">
                                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
                                     @foreach($post->tags as $tag)
                                         <span class="text-yellow-intami p-1 px-2 bg-yellow-100 rounded-full">{{$tag->name}}</span>

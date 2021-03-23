@@ -7,7 +7,7 @@
 
 
             <h1 class="text-center font-semibold text-2xl mb-5">
-                Women
+                Our Recommendations
             </h1>
 
 
@@ -22,18 +22,18 @@
                         <div
                             class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
                             <img src="{{$post->featured_image}}" class="object-cover w-full h-64" alt=""/>
-                            <div class="p-5 border border-t-0">
+                            <div class="p-5 border border-t-0 h-full">
                                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
                                     <span
                                         class="text-gray-600">{{ $post->publish_date->format('d M Y') }}</span>
                                 </p>
-                                <a href="{{ route('women.show', $post->slug) }}" aria-label="Category"
+                                <a href="{{ route('recommendation.show', $post->slug) }}" aria-label="Category"
                                    title="Visit the East"
                                    class="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700">{{ $post->title }}</a>
                                 <p class="mb-2 text-gray-700">
                                     {{ $post->excerpt }}
                                 </p>
-                                <a href="{{ route('women.show', $post->slug) }}" aria-label=""
+                                <a href="{{ route('recommendation.show', $post->slug) }}" aria-label=""
                                    class="inline-flex items-center font-semibold transition-colors duration-200 text-yellow-intami hover:text-yellow-800">Learn
                                     More</a>
                             </div>

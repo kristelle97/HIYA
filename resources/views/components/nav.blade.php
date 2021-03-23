@@ -71,9 +71,13 @@
             <li><a href="{{ route('jobs.index') }}" aria-label="Jobs from our community" title="Jobs from our community"
                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Jobs</a>
             </li>
-            <li><a href="{{ route('women.index') }}" aria-label="Women of Intami" title="Women of Intami"
-                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Women
-                    of Intami</a></li>
+            <li><a href="{{ route('interview.index') }}" aria-label="Women of Intami" title="Interviews"
+                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Interviews</a>
+            </li>
+            <li><a href="{{ route('recommendation.index') }}" aria-label="Our Recommendations"
+                   title="Recommendations"
+                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Recommendations</a>
+            </li>
             @auth
                 <li><a href="{{ route('members.index') }}" aria-label="Members" title="Members"
                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Members</a>
@@ -162,10 +166,12 @@
                                    title="Jobs from our community"
                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Jobs</a>
                             </li>
-                            <li><a href="{{ route('women.index') }}" aria-label="Women of Intami"
+                            <li><a href="{{ route('interview.index') }}" aria-label="Women of Intami"
                                    title="Women of Intami"
-                                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Women
-                                    of Intami</a></li>
+                                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Interviews</a></li>
+                            <li><a href="{{ route('recommendation.index') }}" aria-label="Recommendations"
+                                   title="Recommendations"
+                                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Recommendations</a></li>
                             @auth
                                 <li><a href="{{ route('members.index') }}" aria-label="Members" title="Members"
                                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Members</a>

@@ -1,17 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
+
     <div class="w-full bg-gray-100 py-10 custom-page">
         <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8">
 
             <div class="mb-3">
-                <a class="flex items-center hover:underline" href="{{route('jobs.index')}}">
+                <a class="flex items-center hover:underline" href="{{route('interview.index')}}">
                     <svg class="h-4 w-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                     </svg>
-                    All Jobs
+                    All Intami Women
                 </a>
             </div>
 

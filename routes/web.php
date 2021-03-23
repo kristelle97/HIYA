@@ -29,9 +29,14 @@ Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
 Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
     Route::get( '/', 'JobController@index' )->name( 'index' );
 });
-Route::group([ 'prefix' => 'women', 'as' => 'women.' ],function() {
-    Route::get( '/', 'WomenController@index' )->name( 'index' );
-    Route::get( '/{slug}', 'WomenController@show' )->name( 'show' );
+Route::group([ 'prefix' => 'interviews', 'as' => 'interview.' ],function() {
+    Route::get( '/', 'InterviewController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'InterviewController@show' )->name( 'show' );
+});
+
+Route::group([ 'prefix' => 'recommendations', 'as' => 'recommendation.' ],function() {
+    Route::get( '/', 'RecommendationController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'RecommendationController@show' )->name( 'show' );
 });
 
 /**
