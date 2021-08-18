@@ -23,15 +23,20 @@ Route::get( '/', function () {
  * Blog & Pages
  */
 Route::get( '/page/{slug}', 'PageController@show' )->name( 'page.show' );
-Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
-    Route::get( '/', 'BlogController@index' )->name( 'index' );
-});
-Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
-    Route::get( '/', 'JobController@index' )->name( 'index' );
-});
+
 Route::group([ 'prefix' => 'interviews', 'as' => 'interview.' ],function() {
     Route::get( '/', 'InterviewController@index' )->name( 'index' );
     Route::get( '/{slug}', 'InterviewController@show' )->name( 'show' );
+});
+
+Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
+    Route::get( '/', 'BlogController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'BlogController@show' )->name( 'show' );
+});
+
+Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
+    Route::get( '/', 'JobController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'JobController@show' )->name( 'show' );
 });
 
 Route::group([ 'prefix' => 'events', 'as' => 'event.' ],function() {
@@ -73,10 +78,4 @@ Route::middleware( 'auth' )->group( function () {
     Route::post( 'post/{id}/comment', 'BlogController@comment' )->name( 'post.comment' );
     Route::post( 'post/comment/{id}/like', 'BlogController@likeComment' )->name( 'post.comment.like' );
     Route::delete( 'post/comment/{id}', 'BlogController@delete' )->name( 'post.comment.delete' );
-    Route::group([ 'prefix' => 'blog', 'as' => 'blog.' ],function() {
-        Route::get( '/{slug}', 'BlogController@show' )->name( 'show' );
-    });
-    Route::group([ 'prefix' => 'jobs', 'as' => 'jobs.' ],function() {
-        Route::get( '/{slug}', 'JobController@show' )->name( 'show' );
-    });
 } );
