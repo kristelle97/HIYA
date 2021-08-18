@@ -20,6 +20,9 @@
 {{--                <li class="nav-item">--}}
 {{--                    <a class="nav-link" href="{{ route('women.index') }}">Women of Intami</a>--}}
 {{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="{{ route('event.index') }}">Events</a>--}}
+{{--                </li>--}}
 {{--                <!-- Authentication Links -->--}}
 {{--                @guest--}}
 {{--                    <li class="nav-item">--}}
@@ -73,6 +76,9 @@
             </li>
             <li><a href="{{ route('interview.index') }}" aria-label="Women of Intami" title="Interviews"
                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Interviews</a>
+            </li>
+            <li><a href="{{ route('event.index') }}" aria-label="Events" title="Events"
+                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Events</a>
             </li>
             <li><a href="{{ route('recommendation.index') }}" aria-label="Our Recommendations"
                    title="Recommendations"
@@ -169,6 +175,9 @@
                             <li><a href="{{ route('interview.index') }}" aria-label="Women of Intami"
                                    title="Women of Intami"
                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Interviews</a></li>
+                                   <li><a href="{{ route('event.index') }}" aria-label="Event"
+                                          title="Event"
+                                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Events</a></li>
                             <li><a href="{{ route('recommendation.index') }}" aria-label="Recommendations"
                                    title="Recommendations"
                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-intami">Recommendations</a></li>

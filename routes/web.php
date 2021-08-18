@@ -34,6 +34,11 @@ Route::group([ 'prefix' => 'interviews', 'as' => 'interview.' ],function() {
     Route::get( '/{slug}', 'InterviewController@show' )->name( 'show' );
 });
 
+Route::group([ 'prefix' => 'events', 'as' => 'event.' ],function() {
+    Route::get( '/', 'EventController@index' )->name( 'index' );
+    Route::get( '/{slug}', 'EventController@show' )->name( 'show' );
+});
+
 Route::group([ 'prefix' => 'recommendations', 'as' => 'recommendation.' ],function() {
     Route::get( '/', 'RecommendationController@index' )->name( 'index' );
     Route::get( '/{slug}', 'RecommendationController@show' )->name( 'show' );

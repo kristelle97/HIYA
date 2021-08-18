@@ -25,7 +25,7 @@ class JobController extends Controller
 
     public function show( $slug )
     {
-        $this->middleware( 'auth' );
+        // $this->middleware( 'auth' );
 
         $post = Post::with( ['tags','comments'] )
                         ->whereHas( 'tags', function ( $query ) {

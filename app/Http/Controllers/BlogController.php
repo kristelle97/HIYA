@@ -15,7 +15,8 @@ class BlogController extends Controller
                          $query->whereIn( 'name', [
                              JobController::JOBS_POST_TAG,
                              InterviewController::WOMEN_POST_TAG,
-                             RecommendationController::RECOMMENDATION_POST_TAG
+                             RecommendationController::RECOMMENDATION_POST_TAG,
+                             EventController::EVENTS_POST_TAG
                              ] );
                      } )
                      ->live()
@@ -29,7 +30,7 @@ class BlogController extends Controller
 
     public function show( $slug )
     {
-        $this->middleware( 'auth' );
+        // $this->middleware( 'auth' );
 
         $post = Post::with( ['tags','comments.author'] )
                     ->whereDoesntHave( 'tags', function ( $query ) {

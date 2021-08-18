@@ -4,21 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 
-class InterviewController extends Controller
+class EventController extends Controller
 {
-    const WOMEN_POST_TAG = 'interview';
+    const EVENTS_POST_TAG = 'event';
 
     public function index()
     {
-        $posts = Post::with( ['tags','comments'] )
+        $posts = Post::with( 'tags' )
                          ->whereHas( 'tags', function ( $query ) {
-                             $query->where( 'name', self::WOMEN_POST_TAG );
+                             $query->where( 'name', self::EVENTS_POST_TAG );
                          } )
                          ->live()
                          ->orderBy( 'publish_date', 'DESC' )
                          ->simplePaginate( 12 );
 
-        return view( 'interview.index', [
+        return view( 'events.index', [
             'posts' => $posts
         ] );
     }
@@ -27,14 +27,14 @@ class InterviewController extends Controller
     {
         // $this->middleware( 'auth' );
 
-        $post = Post::with( 'tags' )
+        $post = Post::with( ['tags','comments'] )
                         ->whereHas( 'tags', function ( $query ) {
-                            $query->where( 'name', self::WOMEN_POST_TAG );
+                            $query->where( 'name', self::EVENTS_POST_TAG );
                         } )
                         ->live()
                         ->whereSlug( $slug )
                         ->firstOrFail();
 
-        return view( 'interview.show', compact( 'post' ) );
+        return view( 'events.show', compact( 'post' ) );
     }
 }
